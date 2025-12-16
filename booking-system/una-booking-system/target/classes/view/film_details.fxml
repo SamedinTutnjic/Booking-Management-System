@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ba.una.booking.controller.FilmDetailsController"
+            prefWidth="720" prefHeight="520"
+            stylesheets="@../css/film_details.css"
+            styleClass="details-root">
+
+    <VBox alignment="TOP_CENTER"
+          spacing="35"
+          AnchorPane.topAnchor="30"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+
+        <!-- 🔵 HEADER – ista širina kao polja, shadow samo ovdje -->
+        <StackPane alignment="CENTER"
+                   maxWidth="460"
+                   prefHeight="80"
+                   style="-fx-background-color: #3B82F6;
+                          -fx-background-radius: 24;">
+
+            <effect>
+                <DropShadow radius="18" offsetY="4" color="#00000033"/>
+            </effect>
+
+            <Label text="Detalji o filmu"
+                   style="-fx-font-size: 30px;
+                          -fx-font-weight: 700;
+                          -fx-text-fill: white;
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 6, 0.3, 0, 2);"/>
+        </StackPane>
+
+        <!-- 🔳 POLJA S PODACIMA – ista širina kao header, bez sjene -->
+        <VBox spacing="18"
+              alignment="TOP_CENTER"
+              maxWidth="460">
+
+            <TextField fx:id="tfNaziv"
+                       promptText="Naziv"
+                       editable="false"
+                       focusTraversable="false"
+                       styleClass="details-field"/>
+
+            <TextField fx:id="tfGodina"
+                       promptText="Godina"
+                       editable="false"
+                       focusTraversable="false"
+                       styleClass="details-field"/>
+
+            <TextField fx:id="tfTrajanje"
+                       promptText="Trajanje"
+                       editable="false"
+                       focusTraversable="false"
+                       styleClass="details-field"/>
+
+            <TextField fx:id="tfStatus"
+                       promptText="Status"
+                       editable="false"
+                       focusTraversable="false"
+                       styleClass="details-field"/>
+
+            <TextField fx:id="tfZanr"
+                       promptText="Žanr"
+                       editable="false"
+                       focusTraversable="false"
+                       styleClass="details-field"/>
+        </VBox>
+
+        <!-- 🔴 DUGMAD -->
+        <HBox spacing="20"
+              alignment="CENTER">
+
+            <Button text="Zatvori"
+                    onAction="#closeWindow"
+                    styleClass="details-close-btn"/>
+
+            <Button text="Izbriši"
+                    fx:id="btnDelete"
+                    onAction="#onDeleteFilm"
+                    styleClass="details-delete-btn"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

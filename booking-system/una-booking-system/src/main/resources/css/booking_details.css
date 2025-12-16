@@ -1,0 +1,144 @@
+.details-root {
+    -fx-background-color: white;
+    -fx-padding: 30 0;
+}
+
+.details-field {
+    -fx-background-color: #f4f4f5;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 18;
+    -fx-padding: 12 20;
+    -fx-font-size: 16px;
+    -fx-pref-width: 460;
+
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.details-field:focused {
+    -fx-background-color: #f4f4f5;
+}
+
+/* 🔵 PRIMARY */
+.btn-primary {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 24;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #2563EB;
+}
+
+/* 🔴 DELETE */
+.btn-danger {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 24;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #DC2626;
+}
+/* 🟢 EXPORT BUTTON */
+.btn-export {
+    -fx-background-color: #22C55E; /* green */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 24;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+}
+
+.btn-export:hover {
+    -fx-background-color: #16A34A;
+}
+
+.details-field {
+    -fx-highlight-fill: transparent;
+    -fx-highlight-text-fill: -fx-text-inner-color;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+/* =========================
+   LIGHT MODE
+========================= */
+
+.details-root {
+    -fx-background-color: white;
+    -fx-padding: 30 0;
+}
+
+.details-field {
+    -fx-background-color: #f4f4f5;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 18;
+    -fx-padding: 12 20;
+    -fx-font-size: 16px;
+    -fx-pref-width: 460;
+
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 24;
+}
+
+.btn-danger {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 24;
+}
+
+.btn-export {
+    -fx-background-color: #22C55E;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 24;
+}
+
+/* =========================
+   🌙 DARK MODE (FIXED)
+========================= */
+
+.details-root.dark {
+    -fx-background-color: #0F172A;
+}
+
+.details-root.dark .details-field {
+    -fx-background-color: #1E293B;
+    -fx-text-fill: #E5E7EB;
+}
+
+.details-root.dark .btn-primary {
+    -fx-background-color: #3B82F6;
+}
+
+.details-root.dark .btn-danger {
+    -fx-background-color: #EF4444;
+}
+
+.details-root.dark .btn-export {
+    -fx-background-color: #22C55E;
+}

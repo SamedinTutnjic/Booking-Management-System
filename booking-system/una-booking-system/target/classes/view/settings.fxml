@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ba.una.booking.controller.SettingsController"
+            prefWidth="1000" prefHeight="700"
+            styleClass="page-background"
+            stylesheets="@../css/settings.css">
+
+    <children>
+        <VBox spacing="18"
+              AnchorPane.topAnchor="24"
+              AnchorPane.leftAnchor="32"
+              AnchorPane.rightAnchor="32"
+              AnchorPane.bottomAnchor="24">
+
+            <Label text="Postavke" styleClass="page-title"/>
+            <Separator styleClass="page-separator"/>
+
+            <VBox styleClass="settings-card" spacing="24">
+
+                <HBox alignment="CENTER_RIGHT" spacing="14"
+                      styleClass="settings-card-header">
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <Label text="Postavke" styleClass="settings-card-header-title"/>
+                </HBox>
+
+                <VBox alignment="CENTER" spacing="12">
+
+                    <StackPane fx:id="avatarWrapper" styleClass="settings-avatar-wrapper">
+                        <ImageView fx:id="avatarImage"
+                                   fitWidth="110" fitHeight="110"
+                                   preserveRatio="true"/>
+                    </StackPane>
+
+                    <Label fx:id="settingsNameLabel"
+                           text="User"
+                           styleClass="settings-name"/>
+
+                    <Label fx:id="roleLabel"
+                           text="Una Film Referent"
+                           styleClass="settings-role"/>
+                </VBox>
+
+                <Separator styleClass="settings-inner-separator"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="24">
+                    <Label text="Tema" styleClass="settings-section-label"/>
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <ToggleButton fx:id="themeToggle"
+                                  text="☀"
+                                  styleClass="theme-toggle"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>

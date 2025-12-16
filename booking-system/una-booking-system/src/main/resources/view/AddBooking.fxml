@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ba.una.booking.controller.AddBookingController"
+            prefWidth="1000" prefHeight="700"
+            styleClass="page-background add-page-root">
+
+    <children>
+        <VBox spacing="18"
+              AnchorPane.topAnchor="24"
+              AnchorPane.leftAnchor="32"
+              AnchorPane.rightAnchor="32"
+              AnchorPane.bottomAnchor="24">
+
+            <!-- NASLOV STRANICE -->
+            <Label text="Dodaj Booking" styleClass="page-title"/>
+
+            <Separator styleClass="page-separator"/>
+
+            <!-- GLAVNI CARD -->
+            <VBox styleClass="add-form-card" spacing="20">
+
+                <!-- Header unutar card-a -->
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <VBox spacing="6">
+                            <children>
+                                <Label text="FORMULAR"
+                                       styleClass="add-form-subtitle"/>
+                                <Label text="Dodaj Booking"
+                                       styleClass="add-form-title"/>
+                            </children>
+                        </VBox>
+
+                        <Pane HBox.hgrow="ALWAYS"/>
+
+                        <Label text="Booking"
+                               styleClass="add-form-breadcrumb"/>
+                    </children>
+                </HBox>
+
+                <!-- FORMA – 2 kolone -->
+                <GridPane hgap="32" vgap="16" styleClass="add-form-grid">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="50"/>
+                        <ColumnConstraints percentWidth="50"/>
+                    </columnConstraints>
+
+                    <!-- Odaberi film -->
+                    <VBox spacing="4" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                        <children>
+                            <Label text="Odaberi Film" styleClass="add-form-label"/>
+                            <TextField fx:id="filmField"
+                                       styleClass="add-form-input"
+                                       promptText="Film"/>
+                        </children>
+                    </VBox>
+
+                    <!-- Odaberi partnera -->
+                    <VBox spacing="4" GridPane.rowIndex="0" GridPane.columnIndex="1">
+                        <children>
+                            <Label text="Odaberi Partnera" styleClass="add-form-label"/>
+                            <TextField fx:id="partnerField"
+                                       styleClass="add-form-input"
+                                       promptText="Partner"/>
+                        </children>
+                    </VBox>
+
+                    <!-- Datum početka -->
+                    <VBox spacing="4" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                        <children>
+                            <Label text="Datum početka" styleClass="add-form-label"/>
+                            <TextField fx:id="datumPocetkaField"
+                                       styleClass="add-form-input"
+                                       promptText="npr. 01.01.2025"/>
+                        </children>
+                    </VBox>
+
+                    <!-- Datum završetka -->
+                    <VBox spacing="4" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                        <children>
+                            <Label text="Datum završetka" styleClass="add-form-label"/>
+                            <TextField fx:id="datumZavrsetkaField"
+                                       styleClass="add-form-input"
+                                       promptText="npr. 07.01.2025"/>
+                        </children>
+                    </VBox>
+
+                    <!-- Tip materijala -->
+                    <VBox spacing="4" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                        <children>
+                            <Label text="Tip materijala" styleClass="add-form-label"/>
+                            <TextField fx:id="tipMaterijalaField"
+                                       styleClass="add-form-input"
+                                       promptText="DCP, Hardcopy ..."/>
+                        </children>
+                    </VBox>
+
+                    <!-- Detalji -->
+                    <VBox spacing="4" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                        <children>
+                            <Label text="Detalji" styleClass="add-form-label"/>
+                            <TextArea fx:id="detaljiArea"
+                                      prefRowCount="2"
+                                      styleClass="add-form-input"
+                                      promptText="Detalji"/>
+
+                        </children>
+                    </VBox>
+
+                    <!-- Status (samo lijeva kolona) -->
+                    <VBox spacing="6" GridPane.rowIndex="3" GridPane.columnIndex="0">
+                        <children>
+                            <Label text="Status" styleClass="add-form-label"/>
+                            <HBox spacing="18" styleClass="booking-status-group">
+                                <children>
+                                    <RadioButton fx:id="potvrdiRadio"
+                                                 text="Potvrdi booking"/>
+                                    <RadioButton fx:id="odbijRadio"
+                                                 text="Odbij booking"/>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+
+                </GridPane>
+
+                <!-- DONJA FOOTER TRAKA -->
+                <HBox spacing="12"
+                      alignment="CENTER_LEFT"
+                      styleClass="add-form-footer">
+                    <children>
+
+                        <!-- strelice lijevo (Partner ← Booking → Film) -->
+                        <HBox spacing="8">
+                            <children>
+                                <!-- lijevo: na Dodaj partnera -->
+                                <Button fx:id="btnAddPartner"
+                                        text="◀"
+                                        onAction="#goToAddPartner"
+                                        styleClass="pagination-button"/>
+
+                                <!-- desno: na Dodaj film -->
+                                <Button fx:id="btnAddFilm"
+                                        text="▶"
+                                        onAction="#goToAddFilm"
+                                        styleClass="pagination-button"/>
+                            </children>
+                        </HBox>
+
+                        <Pane HBox.hgrow="ALWAYS"/>
+
+                        <Button text="Odustani"
+                                onAction="#onCancel"
+                                styleClass="add-form-secondary-btn"/>
+
+
+
+                        <Button text="Spremi Booking"
+                                onAction="#onSaveBooking"
+                                styleClass="add-form-primary-btn"/>
+                    </children>
+                </HBox>
+
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,216 @@
+/* ================================================================
+   BOOKING PAGE – usklađeno s FILMOVI
+   ================================================================ */
+
+.page-background { -fx-background-color: #F4F5F7; }
+
+.page { -fx-background-color: transparent; -fx-spacing: 24; }
+
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #111827;
+}
+
+/* ---------- STAT KARTICE ---------- */
+.stat-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 16 22 16 22;
+}
+.stat-number { -fx-font-size: 32px; -fx-font-weight: 700; -fx-text-fill: #111827; }
+.stat-label  { -fx-font-size: 13px; -fx-text-fill: #6B7280; }
+
+/* ---------- + DODAJ BOOKING ---------- */
+.primary-button-small {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8 26 8 26;
+    -fx-background-radius: 8;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+.primary-button-small:hover { -fx-background-color: #2563EB; }
+
+/* ---------- FILTERI ---------- */
+.filter-combo-small {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cfcfcf;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 4 12;
+    -fx-font-size: 12px;
+}
+.filter-combo-small .list-cell {
+    -fx-padding: 4 6;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
+}
+.filter-combo-small .arrow-button { -fx-background-color: transparent; -fx-padding: 0 6 0 6; }
+.filter-combo-small .arrow { -fx-background-color: #111827; }
+.filter-combo-small:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #9CA3AF;
+}
+
+
+/* ================================================================
+   SCROLLPANE oko tabele – fiksna visina (da okvir uvijek ostane isti)
+   ================================================================ */
+.booking-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 0 10 0 0;
+    -fx-background-insets: 0;
+}
+.booking-scroll .viewport {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* scrollbar (ScrollPane) */
+.booking-scroll .scroll-bar:vertical {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+.booking-scroll .scroll-bar:vertical .track {
+    -fx-background-color: #e5e7eb;
+    -fx-background-radius: 4;
+}
+.booking-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #6b7280;
+    -fx-background-radius: 4;
+}
+.booking-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #4b5563;
+}
+.booking-scroll .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+.booking-scroll .corner { -fx-background-color: transparent; }
+
+/* ================================================================
+   KARTICA + TABELA
+   ================================================================ */
+.booking-table-wrapper {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #111827;
+    -fx-border-width: 2;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 0;
+}
+
+.table-view.booking-table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+/* HEADER */
+.table-view.booking-table .column-header-background,
+.table-view.booking-table .column-header {
+    -fx-background-color: #3B82F6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 12 12 0 0;
+    -fx-border-color: transparent transparent #1D4ED8 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 0 3 0;
+}
+.table-view.booking-table .column-header-background > .filler {
+    -fx-background-color: transparent;
+}
+.table-view.booking-table .column-header .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER;
+    -fx-padding: 4;
+}
+.table-view.booking-table .column-header {
+    -fx-border-color: transparent #2563EB transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* ROWS */
+.table-view.booking-table .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 44;
+}
+.table-view.booking-table .table-row-cell:selected { -fx-background-color: #EEF2FF; }
+
+.table-view.booking-table .table-cell {
+    -fx-padding: 6 10;
+    -fx-alignment: CENTER;
+    -fx-border-width: 0;
+    -fx-font-size: 13px;
+}
+
+.table-view.booking-table:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* sakrij TableView scroll, koristimo ScrollPane */
+.table-view.booking-table .scroll-bar {
+    -fx-opacity: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+/* ================================================================
+   Detalji dugme + status
+   ================================================================ */
+.details-button {
+    -fx-background-color: #3aa0ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 3 12;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+.details-button:hover { -fx-background-color: #1f7cd9; }
+
+.status-pill {
+    -fx-background-radius: 999;
+    -fx-padding: 3 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+}
+.status-pill-confirmed { -fx-background-color: #BBF7D0; -fx-text-fill: #166534; }
+.status-pill-rejected  { -fx-background-color: #FEE2E2; -fx-text-fill: #B91C1C; }
+.status-pill-pending   { -fx-background-color: #FEF9C3; -fx-text-fill: #92400E; }
+
+/* ================================================================
+   COMBOBOX POPUP – FORCE TAMAN TEKST NA HOVER
+   ================================================================ */
+
+/* osnovne stavke u dropdown popupu */
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: #111827;
+}
+
+/* hover stavka */
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #111827;
+}
+
+/* selektovana stavka */
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #E5E7EB;
+    -fx-text-fill: #111827;
+}
+
+/* selektovana + hover (NAJBITNIJE) */
+.combo-box-popup .list-view .list-cell:selected:hover {
+    -fx-background-color: #E5E7EB;
+    -fx-text-fill: #111827;
+}

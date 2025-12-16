@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ba.una.booking.controller.PartnerDetailsController"
+            prefWidth="720" prefHeight="520"
+            stylesheets="@../css/partner_details.css"
+            styleClass="details-root">
+
+    <VBox alignment="TOP_CENTER"
+          spacing="35"
+          AnchorPane.topAnchor="30"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+
+        <!-- 🔵 HEADER -->
+        <StackPane alignment="CENTER"
+                   maxWidth="460"
+                   prefHeight="80"
+                   style="-fx-background-color: #3B82F6;
+                          -fx-background-radius: 24;">
+
+            <effect>
+                <DropShadow radius="18" offsetY="4" color="#00000033"/>
+            </effect>
+
+            <Label text="Detalji o partneru"
+                   style="-fx-font-size: 30px;
+                          -fx-font-weight: 700;
+                          -fx-text-fill: white;"/>
+        </StackPane>
+
+        <!-- 🔳 POLJA -->
+        <VBox spacing="18"
+              alignment="TOP_CENTER"
+              maxWidth="460">
+
+            <TextField fx:id="txtNaziv" styleClass="details-field" editable="false"/>
+            <TextField fx:id="txtGrad" styleClass="details-field" editable="false"/>
+            <TextField fx:id="txtKontakt" styleClass="details-field" editable="false"/>
+            <TextField fx:id="txtEmail" styleClass="details-field" editable="false"/>
+            <TextField fx:id="txtTelefon" styleClass="details-field" editable="false"/>
+            <TextField fx:id="txtStatus" styleClass="details-field" editable="false"/>
+
+        </VBox>
+
+        <!-- 🔘 DUGMAD – ISTO KAO FILM -->
+        <HBox spacing="20" alignment="CENTER">
+
+            <Button text="Zatvori"
+                    onAction="#closeWindow"
+                    styleClass="details-primary-btn"/>
+
+            <Button text="Izbriši"
+                    onAction="#handleDelete"
+                    styleClass="details-danger-btn"/>
+
+        </HBox>
+
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="rootPane"
+            fx:controller="ba.una.booking.controller.MainController"
+            styleClass="app-root page-background"
+            stylesheets="@/css/dark-theme.css">
+
+    <!-- SIDEBAR -->
+    <left>
+        <BorderPane fx:id="sidebar"
+                    styleClass="sidebar"
+                    prefWidth="80"
+                    minWidth="80"
+                    maxWidth="80">
+
+            <!-- TOP: IKONE -->
+            <top>
+                <VBox alignment="TOP_CENTER"
+                      spacing="25"
+                      style="-fx-padding: 25 0 0 0;">
+
+                    <Button fx:id="btnDashboard" styleClass="sidebar-btn" onAction="#showDashboard">
+                        <graphic>
+                            <ImageView fitWidth="28" fitHeight="28">
+                                <image><Image url="@/icons/home.png"/></image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Button fx:id="btnAddBooking" styleClass="sidebar-btn" onAction="#showAddBooking">
+                        <graphic>
+                            <ImageView fitWidth="28" fitHeight="28">
+                                <image><Image url="@/icons/plus.png"/></image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Button fx:id="btnPartners" styleClass="sidebar-btn" onAction="#showPartners">
+                        <graphic>
+                            <ImageView fitWidth="28" fitHeight="28">
+                                <image><Image url="@/icons/users.png"/></image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Button fx:id="btnFilms" styleClass="sidebar-btn" onAction="#showFilms">
+                        <graphic>
+                            <ImageView fitWidth="28" fitHeight="28">
+                                <image><Image url="@/icons/movies.png"/></image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Button fx:id="btnBooking" styleClass="sidebar-btn" onAction="#showBooking">
+                        <graphic>
+                            <ImageView fitWidth="28" fitHeight="28">
+                                <image><Image url="@/icons/book.png"/></image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Button fx:id="btnCalendar" styleClass="sidebar-btn" onAction="#openCalendar">
+                        <graphic>
+                            <ImageView fitWidth="28" fitHeight="28">
+                                <image><Image url="@/icons/calendar.png"/></image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+
+
+                    <Button fx:id="btnSettings" styleClass="sidebar-btn" onAction="#showSettings">
+                        <graphic>
+                            <ImageView fitWidth="28" fitHeight="28">
+                                <image><Image url="@/icons/settings.png"/></image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                </VBox>
+            </top>
+
+            <!-- BOTTOM: LOGOUT (ZAKUCAN) -->
+            <bottom>
+                <VBox alignment="BOTTOM_CENTER"
+                      style="-fx-padding: 0 0 25 0;">
+                    <Button fx:id="btnLogout"
+                            styleClass="logout-btn"
+                            onAction="#onLogout">
+                        <graphic>
+                            <ImageView fitWidth="27" fitHeight="27" preserveRatio="true">
+                                <image><Image url="@/icons/logout.png"/></image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </VBox>
+            </bottom>
+
+        </BorderPane>
+    </left>
+
+    <!-- MAIN CONTENT -->
+    <center>
+        <StackPane styleClass="content-bg">
+            <VBox fx:id="contentWrapper"/>
+        </StackPane>
+    </center>
+
+</BorderPane>

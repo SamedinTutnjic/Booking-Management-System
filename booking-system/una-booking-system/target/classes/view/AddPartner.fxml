@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ba.una.booking.controller.AddPartnerController"
+            styleClass="page-background add-page-root">
+
+    <children>
+
+        <VBox spacing="12"
+              AnchorPane.topAnchor="20"
+              AnchorPane.leftAnchor="24"
+              AnchorPane.rightAnchor="24">
+
+            <!-- PAGE TITLE -->
+            <Label text="Dodaj partnera" styleClass="page-title"/>
+            <Separator styleClass="page-separator"/>
+
+            <!-- FORM CARD -->
+            <VBox styleClass="add-form-card" spacing="16">
+
+                <!-- HEADER -->
+                <HBox alignment="CENTER_LEFT">
+                    <VBox spacing="4">
+                        <Label text="FORMULAR" styleClass="add-form-subtitle"/>
+                        <Label text="Dodaj novog partnera" styleClass="add-form-title"/>
+                    </VBox>
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <Label text="Partneri / Dodaj partnera"
+                           styleClass="add-form-breadcrumb"/>
+                </HBox>
+
+                <!-- FORMA -->
+                <GridPane hgap="24" vgap="12" styleClass="add-form-grid">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="50"/>
+                        <ColumnConstraints percentWidth="50"/>
+                    </columnConstraints>
+
+                    <!-- Naziv -->
+                    <VBox spacing="4" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                        <Label text="Naziv partnera" styleClass="add-form-label"/>
+                        <TextField fx:id="nazivField"
+                                   styleClass="add-form-input"
+                                   promptText="npr. Cinema City"/>
+                    </VBox>
+
+                    <!-- Grad -->
+                    <VBox spacing="4" GridPane.rowIndex="0" GridPane.columnIndex="1">
+                        <Label text="Grad" styleClass="add-form-label"/>
+                        <TextField fx:id="gradField"
+                                   styleClass="add-form-input"
+                                   promptText="npr. Sarajevo"/>
+                    </VBox>
+
+                    <!-- Adresa -->
+                    <VBox spacing="4" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                        <Label text="Adresa" styleClass="add-form-label"/>
+                        <TextField fx:id="adresaField"
+                                   styleClass="add-form-input"
+                                   promptText="npr. Zmaja od Bosne 12"/>
+                    </VBox>
+
+                    <!-- Kontakt osoba -->
+                    <VBox spacing="4" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                        <Label text="Kontakt osoba" styleClass="add-form-label"/>
+                        <TextField fx:id="kontaktOsobaField"
+                                   styleClass="add-form-input"
+                                   promptText="Ime i prezime"/>
+                    </VBox>
+
+                    <!-- Telefon -->
+                    <VBox spacing="4" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                        <Label text="Telefon" styleClass="add-form-label"/>
+                        <TextField fx:id="telefonField"
+                                   styleClass="add-form-input"
+                                   promptText="npr. 061 123 456"/>
+                    </VBox>
+
+                    <!-- Email -->
+                    <VBox spacing="4" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                        <Label text="Email" styleClass="add-form-label"/>
+                        <TextField fx:id="emailField"
+                                   styleClass="add-form-input"
+                                   promptText="npr. info@cinemacity.ba"/>
+                    </VBox>
+
+                    <HBox GridPane.rowIndex="3"
+                          GridPane.columnIndex="0"
+                          GridPane.columnSpan="2"
+                          alignment="TOP_LEFT">
+
+                        <!-- Status -->
+                        <VBox spacing="4" prefWidth="300">
+                            <Label text="Status" styleClass="add-form-label"/>
+                            <ComboBox fx:id="statusCombo"
+                                      styleClass="add-form-input"
+                                      promptText="Odaberi status"/>
+                        </VBox>
+
+                        <!-- RAZMAK ~ 1 cm -->
+                        <Pane prefWidth="40"/>
+
+                        <!-- Napomena -->
+                        <VBox spacing="4" prefWidth="900">
+                            <Label text="Napomena (opcionalno)" styleClass="add-form-label"/>
+                            <TextArea fx:id="napomenaArea"
+                                      prefRowCount="2"
+                                      styleClass="add-form-input"
+                                      promptText="Dodatne informacije o partneru"/>
+                        </VBox>
+
+                    </HBox>
+                </GridPane>
+
+                <!-- FOOTER -->
+                <HBox spacing="12"
+                      alignment="CENTER_LEFT"
+                      styleClass="add-form-footer">
+
+                    <HBox spacing="8">
+                        <Button text="◀"
+                                onAction="#goToAddFilm"
+                                styleClass="pagination-button"/>
+                        <Button text="▶"
+                                onAction="#goToAddBooking"
+                                styleClass="pagination-button"/>
+                    </HBox>
+
+                    <Pane HBox.hgrow="ALWAYS"/>
+
+                    <Button text="Odustani"
+                            onAction="#onCancel"
+                            styleClass="add-form-secondary-btn"/>
+
+                    <Button text="Spremi Partnera"
+                            onAction="#onSavePartner"
+                            styleClass="add-form-primary-btn"/>
+                </HBox>
+
+            </VBox>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

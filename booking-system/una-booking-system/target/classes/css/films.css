@@ -1,0 +1,250 @@
+/* ================================================================
+   NASLOV STRANICE
+   ================================================================ */
+
+.page-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1a1a;
+}
+
+/* ================================================================
+   DUGME: + Dodaj film
+   ================================================================ */
+
+.add-button-small {
+    -fx-background-color: #3a82f7;
+    -fx-background-radius: 8px;
+    -fx-padding: 8 18;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.add-button-small:hover {
+    -fx-background-color: #1560d4;
+}
+
+/* ================================================================
+   SEARCH
+   ================================================================ */
+
+.search-box-small {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cfcfcf;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 3 10;
+    -fx-spacing: 6;
+}
+
+.search-icon-small {
+    -fx-font-size: 13px;
+}
+
+.search-input-small {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 3;
+    -fx-font-size: 12px;
+}
+
+/* ================================================================
+   FILTER BUTTONS
+   ================================================================ */
+
+.filter-button-small {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cfcfcf;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 4 14;
+    -fx-font-size: 12px;
+}
+.filter-button-small:hover {
+    -fx-background-color: #f2f2f2;
+}
+
+/* ================================================================
+   SCROLLPANE (oko tabele)
+   ================================================================ */
+
+.films-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 0 10 0 0;   /* razmak između kartice i scrollbara (desno) */
+    -fx-background-insets: 0;
+}
+
+.films-scroll .viewport {
+    -fx-background-color: transparent;
+    -fx-padding: 0;          /* nema linije iznad tabele */
+}
+
+/* ================================================================
+   KARTICA OKO TABELE (films-table-wrapper)
+   ================================================================ */
+
+.films-table-wrapper {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #111827;
+    -fx-border-width: 2;
+
+    /* radius kartice = radius headera (12) → ništa ne viri */
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+
+    -fx-padding: 0;
+}
+
+/* ================================================================
+   TABELA FILMOVA (films-table)
+   ================================================================ */
+
+.table-view.films-table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-padding: 0;             /* nema dodatne margine gore */
+}
+
+/* ================================================================
+   HEADER
+   ================================================================ */
+
+.table-view.films-table .column-header-background,
+.table-view.films-table .column-header {
+    -fx-background-color: #3B82F6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 12 12 0 0;   /* isti top radius kao kartica */
+    -fx-border-color: transparent transparent #1D4ED8 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 0 3 0;
+}
+
+/* FIX: uklanja JavaFX filler koji zna viriti */
+.table-view.films-table .column-header-background > .filler {
+    -fx-background-color: transparent;
+}
+
+/* tekst u headeru */
+.table-view.films-table .column-header .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER;
+    -fx-padding: 4;
+}
+
+/* standardni border između kolona
+   (zadnjoj ćemo ga ugasiti u kontroleru) */
+.table-view.films-table .column-header {
+    -fx-border-color: transparent #2563EB transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* ================================================================
+   REDOVI I CELIJE
+   ================================================================ */
+
+.table-view.films-table .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 44;
+}
+
+.table-view.films-table .table-row-cell:selected {
+    -fx-background-color: #EEF2FF;
+}
+
+.table-view.films-table .table-cell {
+    -fx-padding: 6 10;
+    -fx-alignment: CENTER;
+    -fx-border-width: 0;
+    -fx-font-size: 13;
+}
+
+/* bez fokus okvira */
+.table-view.films-table:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Sakrij TableView scrollbarove – koristimo ScrollPane scroll */
+.table-view.films-table .scroll-bar {
+    -fx-opacity: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+/* ================================================================
+   SCROLLPANE SCROLLBAR (moderni, tanak)
+   ================================================================ */
+
+.films-scroll .scroll-bar:vertical {
+    -fx-pref-width: 8;                 /* tanji scroll */
+    -fx-background-color: transparent;
+}
+
+.films-scroll .scroll-bar:vertical .track {
+    -fx-background-color: #e5e7eb;
+    -fx-background-radius: 4;
+}
+
+.films-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #6b7280;
+    -fx-background-radius: 4;
+}
+
+.films-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #4b5563;
+}
+
+/* sakrij horizontalni */
+.films-scroll .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+
+/* ugao (donji desni ćošak) */
+.films-scroll .corner {
+    -fx-background-color: transparent;
+}
+
+/* ================================================================
+   STATUS BADGE
+   ================================================================ */
+
+.status-active {
+    -fx-background-color: #6ef78a;
+    -fx-text-fill: #0b4d1d;
+    -fx-background-radius: 12;
+    -fx-padding: 3 12;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+}
+
+.status-inactive {
+    -fx-background-color: #ffb8b8;
+    -fx-text-fill: #7a0000;
+    -fx-background-radius: 12;
+    -fx-padding: 3 12;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+}
+
+/* ================================================================
+   DUGME: Detalji
+   ================================================================ */
+
+.detail-button {
+    -fx-background-color: #3aa0ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 3 12;
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+.detail-button:hover {
+    -fx-background-color: #1f7cd9;
+}

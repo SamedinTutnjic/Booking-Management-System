@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane
+        fx:id="root"
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="ba.una.booking.controller.BookingDetailsController"
+        prefWidth="720" prefHeight="740"
+        stylesheets="@../css/booking_details.css"
+        styleClass="details-root">
+
+    <VBox alignment="TOP_CENTER"
+          spacing="30"
+          AnchorPane.topAnchor="30"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+
+        <!-- HEADER -->
+        <StackPane alignment="CENTER"
+                   maxWidth="460"
+                   prefHeight="80"
+                   style="-fx-background-color: #3B82F6;
+                          -fx-background-radius: 24;">
+
+            <VBox.margin>
+                <Insets top="-30"/>
+            </VBox.margin>
+
+            <effect>
+                <DropShadow radius="18" offsetY="4" color="#00000033"/>
+            </effect>
+
+            <Label text="Detalji Bookinga"
+                   style="-fx-font-size: 30px;
+                          -fx-font-weight: 700;
+                          -fx-text-fill: white;
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 6, 0.3, 0, 2);"/>
+        </StackPane>
+
+        <!-- POLJA -->
+        <VBox spacing="18"
+              alignment="TOP_CENTER"
+              maxWidth="460">
+
+            <TextField fx:id="filmField" editable="false" styleClass="details-field"/>
+            <TextField fx:id="partnerField" editable="false" styleClass="details-field"/>
+            <TextField fx:id="startDateField" editable="false" styleClass="details-field"/>
+            <TextField fx:id="endDateField" editable="false" styleClass="details-field"/>
+            <TextField fx:id="materialField" editable="false" styleClass="details-field"/>
+            <TextField fx:id="statusField" editable="false" styleClass="details-field"/>
+            <TextField fx:id="createdByField" editable="false" styleClass="details-field"/>
+            <TextField fx:id="createdAtField" editable="false" styleClass="details-field"/>
+        </VBox>
+
+        <!-- DUGMAD -->
+        <HBox alignment="CENTER" spacing="20" maxWidth="460">
+
+            <Button fx:id="btnExport"
+                    text="Export u Excel"
+                    prefWidth="160"
+                    onAction="#handleExport"
+                    styleClass="btn-export"/>
+
+            <Button fx:id="btnDelete"
+                    text="Izbriši"
+                    prefWidth="150"
+                    onAction="#handleDelete"
+                    styleClass="btn-danger"/>
+
+            <Button text="Zatvori"
+                    prefWidth="150"
+                    onAction="#handleClose"
+                    styleClass="btn-primary"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ba.una.booking.controller.LoginController"
+            prefWidth="1200" prefHeight="750"
+            styleClass="root-background">
+
+    <!-- LIJEVI PANEL: LOGO -->
+    <left>
+        <VBox styleClass="login-left">
+            <children>
+
+                <ImageView fitWidth="260" preserveRatio="true" styleClass="logo-image">
+                    <image>
+                        <!-- pretpostavka: src/main/resources/img/UnaFilmLogo2.png -->
+                        <Image url="@../img/UnaFilmLogo2.png"/>
+                    </image>
+                </ImageView>
+
+                <Label text="Cinema Booking Management System"
+                       styleClass="login-subtitle"/>
+
+            </children>
+        </VBox>
+    </left>
+
+    <!-- DESNI PANEL: FORMA ZA LOGIN -->
+    <center>
+        <VBox styleClass="login-right" spacing="22" alignment="CENTER">
+
+            <children>
+
+                <!-- KORISNIČKO IME -->
+                <VBox spacing="6">
+                    <children>
+                        <TextField fx:id="usernameField"
+                                   promptText="Korisničko ime"
+                                   styleClass="input-field"/>
+                    </children>
+                </VBox>
+
+                <!-- ŠIFRA -->
+                <VBox spacing="6">
+                    <children>
+                        <PasswordField fx:id="passwordField"
+                                       promptText="Šifra"
+                                       styleClass="input-field"/>
+                    </children>
+                </VBox>
+
+                <!-- DUGME ZA PRIJAVU -->
+                <VBox alignment="CENTER">
+                    <Button fx:id="loginButton"
+                            text="PRIJAVI SE"
+                            onAction="#onLogin"
+                            defaultButton="true"
+                            styleClass="primary-button"/>
+                </VBox>
+
+                <!-- PORUKA O GREŠCI -->
+                <Label fx:id="errorLabel"
+                       styleClass="error-label"/>
+
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

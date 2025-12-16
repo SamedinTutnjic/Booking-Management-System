@@ -1,0 +1,529 @@
+/* ===== GLOBAL DARK MODE ===== */
+
+.dark {
+    -fx-background-color: #000000;
+}
+
+.dark,
+.dark .root,
+.dark .page-background,
+.dark .content-wrapper,
+.dark .border-pane,
+.dark .anchor-pane,
+.dark .vbox,
+.dark .hbox,
+.dark .stack-pane {
+    -fx-background-color: #020617;
+}
+
+/* background svih stranica */
+.dark .page-background,
+.dark .content-bg,
+.dark .anchor-pane,
+.dark .border-pane,
+.dark .vbox,
+.dark .hbox,
+.dark .stack-pane {
+    -fx-background-color: #000000;
+}
+
+/* NASLOVI */
+.dark .page-title,
+.dark .section-title {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* OBICNI TEKST */
+.dark .label {
+    -fx-text-fill: #D1D5DB;
+}
+
+/* KARTICE */
+.dark .stat-card,
+.dark .settings-card,
+.dark .add-form-card {
+    -fx-background-color: #0F0F0F;
+    -fx-border-color: #374151;
+}
+
+/* INPUTI */
+.dark .text-field,
+.dark .combo-box,
+.dark .text-area,
+.dark .date-picker {
+    -fx-background-color: #111827;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #374151;
+}
+
+.dark .stat-card,
+.dark .add-form-card,
+.dark .settings-card,
+.dark .card {
+    -fx-background-color: #0B1220;
+    -fx-border-color: #1E293B;
+}
+.dark .table-view {
+    -fx-background-color: #020617;
+    -fx-control-inner-background: #020617;
+}
+.dark .table-view .column-header-background {
+    -fx-background-color: #020617;
+}
+
+.dark .table-view .column-header .label {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: bold;
+}
+.dark .table-row-cell {
+    -fx-background-color: #020617;
+    -fx-border-color: #1E293B;
+}
+
+.dark .table-row-cell:selected {
+    -fx-background-color: #1E293B;
+}
+.dark .table-view .table-cell {
+    -fx-text-fill: #E5E7EB;
+}
+.dark .text-field,
+.dark .text-area,
+.dark .combo-box,
+.dark .date-picker,
+.dark .choice-box {
+    -fx-background-color: #0B1220;
+    -fx-text-fill: #E5E7EB;
+    -fx-border-color: #1E293B;
+}
+.dark .text-field .text,
+.dark .text-area .text {
+    -fx-fill: #E5E7EB;
+}
+.dark .calendar-day,
+.dark .calendar-cell,
+.dark .calendar-wrapper {
+    -fx-background-color: #0B1220;
+    -fx-border-color: #1E293B;
+}
+
+/* PARTNER FILTER BUTTONS – DARK */
+.dark .filter-button-small,
+.dark .filter-button-small:hover {
+    -fx-background-color: #0F172A;
+    -fx-border-color: #1F2937;
+    -fx-text-fill: #E5E7EB;
+}
+
+
+/* ===================== */
+/* TABLE VIEW – DARK */
+/* ===================== */
+
+.dark .table-view {
+    -fx-background-color: #0B1220;
+    -fx-border-color: #1F2937;
+}
+
+/* header */
+.dark .table-view .column-header-background {
+    -fx-background-color: #0F172A;
+}
+
+.dark .table-view .column-header .label {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: bold;
+}
+
+/* redovi */
+.dark .table-row-cell {
+    -fx-background-color: #0B1220;
+}
+
+.dark .table-row-cell:odd {
+    -fx-background-color: #0E1626;
+}
+
+/* tekst u ćelijama */
+.dark .table-view .table-cell {
+    -fx-text-fill: #E5E7EB;
+}
+
+/* selekcija */
+.dark .table-row-cell:selected {
+    -fx-background-color: #1E293B;
+}
+/* INPUTS + FILTERS */
+
+.dark .text-field,
+.dark .combo-box,
+.dark .choice-box,
+.dark .menu-button {
+    -fx-background-color: #0F172A;
+    -fx-text-fill: #E5E7EB;
+    -fx-border-color: #1F2937;
+}
+
+.dark .menu-button > .label {
+    -fx-text-fill: #E5E7EB;
+}
+/* ===================== */
+/* CALENDAR – DARK */
+/* ===================== */
+
+.dark .calendar-root,
+.dark .calendar-container {
+    -fx-background-color: #020617;
+}
+
+/* grid dana */
+.dark .calendar-day {
+    -fx-background-color: #0B1220;
+    -fx-border-color: #1F2937;
+}
+
+/* prazni dani */
+.dark .calendar-day-empty {
+    -fx-background-color: #020617;
+}
+
+/* header mjeseca */
+.dark .calendar-header {
+    -fx-text-fill: #E5E7EB;
+}
+/* DASHBOARD CARDS */
+
+.dark .stat-card,
+.dark .dashboard-card {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #0B1220,
+            #020617
+    );
+    -fx-border-color: #1F2937;
+}
+
+/* quick actions */
+.dark .quick-action {
+    -fx-background-color: #0F172A;
+    -fx-text-fill: #E5E7EB;
+}
+
+/* =========================
+   TABLE OVERRIDE – DARK
+   ========================= */
+
+.dark .table-view,
+.dark .table-view .table-row-cell,
+.dark .table-view .table-cell,
+.dark .films-table-wrapper,
+.dark .partners-table-wrapper,
+.dark .booking-table-wrapper {
+    -fx-background-color: #020617;
+    -fx-control-inner-background: #020617;
+}
+
+.dark .table-row-cell {
+    -fx-border-color: #1F2937;
+}
+
+.dark .table-row-cell:selected {
+    -fx-background-color: #1E293B;
+}
+
+.dark .table-view .table-cell {
+    -fx-text-fill: #E5E7EB;
+}
+/* =========================
+   CHARTS – DARK MODE
+   ========================= */
+
+/* pozadina grafa */
+.dark .chart {
+    -fx-background-color: #020617;
+}
+
+.dark .chart-plot-background {
+    -fx-background-color: #020617;
+}
+
+/* ose */
+.dark .axis {
+    -fx-tick-label-fill: #E5E7EB;
+}
+
+.dark .axis-label {
+    -fx-text-fill: #E5E7EB;
+}
+
+/* grid linije */
+.dark .chart-vertical-grid-lines,
+.dark .chart-horizontal-grid-lines {
+    -fx-stroke: #1F2937;
+}
+
+/* linije grafa */
+.dark .chart-series-line {
+    -fx-stroke-width: 2.5px;
+}
+
+/* tooltip */
+.dark .chart-tooltip {
+    -fx-background-color: #020617;
+    -fx-text-fill: #E5E7EB;
+}
+/* =========================
+   DASHBOARD – QUICK ACTIONS
+   ========================= */
+
+.dark .quick-action-box {
+    -fx-background-color: #0B1220;
+    -fx-border-color: #1F2937;
+}
+
+.dark .quick-action-text {
+    -fx-text-fill: #E5E7EB;
+}
+
+.dark .quick-action-icon-circle {
+    -fx-background-color: #1E293B;
+}
+
+.dark .quick-action-icon-plus {
+    -fx-text-fill: #E5E7EB;
+}
+
+/* status pill tekst */
+.dark .status-active,
+.dark .status-inactive,
+.dark .status-pill-confirmed,
+.dark .status-pill-rejected,
+.dark .status-pill-pending {
+    -fx-text-fill: #020617;
+}
+.dark .search-box-small {
+    -fx-background-color: #0F172A;
+    -fx-border-color: #1F2937;
+}
+
+.dark .search-input-small {
+    -fx-text-fill: #E5E7EB;
+}
+.dark .combo-box .arrow {
+    -fx-background-color: #E5E7EB;
+}
+
+.dark .combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+.dark .table-view.films-table .table-row-cell,
+.dark .table-view.partners-table .table-row-cell,
+.dark .table-view.booking-table .table-row-cell {
+    -fx-background-color: #020617;
+    -fx-border-color: #1F2937;
+}
+
+.dark .table-view.films-table .table-cell,
+.dark .table-view.partners-table .table-cell,
+.dark .table-view.booking-table .table-cell {
+    -fx-text-fill: #E5E7EB;
+}
+.dark .chart {
+    -fx-background-color: transparent;
+}
+
+.dark .chart-plot-background {
+    -fx-background-color: #020617;
+}
+
+.dark .chart-horizontal-grid-lines,
+.dark .chart-vertical-grid-lines {
+    -fx-stroke: #1F2937;
+}
+
+.dark .axis {
+    -fx-tick-label-fill: #E5E7EB;
+}
+
+.dark .axis-label {
+    -fx-text-fill: #E5E7EB;
+}
+.dark .calendar-container,
+.dark .calendar-wrapper,
+.dark .calendar-root {
+    -fx-background-color: #020617;
+}
+
+/* =========================================================
+   CALENDAR – FINAL DARK (uklanja bijeli okvir/gap)
+   ========================================================= */
+
+/* VANJSKI KONTEJNER (najčešće AnchorPane/VBox oko kalendara) */
+.dark .calendar-root,
+.dark .calendar-container,
+.dark .calendar-wrapper {
+    -fx-background-color: #020617;
+}
+
+/* AKO TI JE GRID U NEKOJ "kartici" koja je bijela */
+.dark .calendar-card,
+.dark .calendar-panel {
+    -fx-background-color: #0B1220;
+    -fx-border-color: #1F2937;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+}
+
+/* GRID (GridPane) – ukloni bijelu pozadinu i “gap” */
+.dark .calendar-grid {
+    -fx-background-color: #0B1220;
+    -fx-border-color: #1F2937;
+    -fx-background-insets: 0;
+    -fx-padding: 10; /* po želji */
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+}
+
+/* ĆELIJE (dan) – NEMA BIJELOG OUTLINE */
+.dark .calendar-day,
+.dark .calendar-cell {
+    -fx-background-color: #020617;
+    -fx-border-color: #1F2937;
+    -fx-border-width: 1;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+}
+
+/* BROJ DANA – BIJELI */
+.dark .calendar-day-number {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: 600;
+}
+
+.dark .calendar-weekday,
+.dark .weekday-label {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: 600;
+}
+
+/* Header mjeseca */
+.dark .calendar-month-title,
+.dark .calendar-header-label {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: 700;
+}
+
+/* Strelice / dugmad u headeru (da ne bude bijeli ring) */
+.dark .calendar-nav-button,
+.dark .calendar-header .button,
+.dark .calendar-header Button {
+    -fx-background-color: #0F172A;
+    -fx-text-fill: #E5E7EB;
+    -fx-border-color: #1F2937;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+}
+.dark .calendar-nav-button:hover,
+.dark .calendar-header .button:hover,
+.dark .calendar-header Button:hover {
+    -fx-background-color: #1E293B;
+}
+
+/* EVENT PILL – tekst tamniji (da bude čitko na mint/blue pill) */
+.dark .calendar-event,
+.dark .event-pill {
+    -fx-text-fill: #020617;
+    -fx-font-weight: 600;
+}
+/* =========================================================
+   CALENDAR – EVENT TEXT (CRNO)
+   ========================================================= */
+
+/* tekst unutar booking pillova */
+.dark .calendar-event,
+.dark .event-pill,
+.dark .calendar-event-label,
+.dark .calendar-event-text {
+    -fx-text-fill: #020617;   /* skoro crna */
+    -fx-font-weight: 600;
+}
+
+/* BOOKING TEXT – CRN */
+.dark .calendar-day-bookings Label {
+    -fx-text-fill: #020617;   /* crni tekst */
+    -fx-font-weight: 600;
+}
+
+/* =====================================
+   COMBOBOX – SELECTED VALUE (FIX)
+   ===================================== */
+
+/* zatvoreni ComboBox – tekst */
+.dark .combo-box .list-cell {
+    -fx-text-fill: #E5E7EB;
+}
+
+/* hover preko ComboBox-a */
+.dark .combo-box:hover .list-cell {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* fokus */
+.dark .combo-box:focused .list-cell {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* ukloni bijeli background unutra */
+.dark .combo-box .list-cell {
+    -fx-background-color: transparent;
+}
+
+/* arrow */
+.dark .combo-box .arrow {
+    -fx-background-color: #E5E7EB;
+}
+
+/* =====================================
+   COMBOBOX DROPDOWN (POPUP LIST)
+   ===================================== */
+
+/* cijeli popup */
+.dark .combo-box-popup {
+    -fx-background-color: #020617;
+    -fx-border-color: #1F2937;
+}
+
+/* list view u popupu */
+.dark .combo-box-popup .list-view {
+    -fx-background-color: #020617;
+    -fx-control-inner-background: #020617;
+}
+
+/* svaka stavka */
+.dark .combo-box-popup .list-view .list-cell {
+    -fx-background-color: #020617;
+    -fx-text-fill: #E5E7EB;
+}
+
+/* hover nad stavkom */
+.dark .combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #1E293B;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* selektovana stavka */
+.dark .combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #2563EB;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* tooltip (popup koji si pokazala na slici) */
+.dark .tooltip {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: #020617;
+    -fx-font-size: 13px;
+    -fx-padding: 8 12;
+}
+
+.details-root.dark {
+    -fx-background-color: #020617;
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ba.una.booking.controller.PartnersController"
+            stylesheets="@../css/partneri.css"
+            prefWidth="1200" prefHeight="800"
+            styleClass="page-background">
+
+
+    <VBox spacing="20"
+          AnchorPane.topAnchor="30"
+          AnchorPane.leftAnchor="40"
+          AnchorPane.rightAnchor="40"
+          AnchorPane.bottomAnchor="30">
+
+        <Label text="Partneri" styleClass="page-title"/>
+
+        <!-- RED: +Dodaj partnera + search + filteri -->
+        <HBox alignment="CENTER_LEFT" spacing="15">
+
+            <Button fx:id="addPartnerButton"
+                    text="+ Dodaj Partnera"
+                    onAction="#openAddPartner"
+                    styleClass="add-button-small"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- SEARCH (kao Filmovi) -->
+            <HBox alignment="CENTER_LEFT" styleClass="search-box-small">
+                <Label text="🔍" styleClass="search-icon-small"/>
+                <TextField fx:id="searchField"
+                           promptText="Pretraži partnera"
+                           styleClass="search-input-small"/>
+            </HBox>
+
+            <Button fx:id="filterButton"
+                    text="Filter ▾"
+                    styleClass="filter-button-small"/>
+
+            <Button fx:id="statusFilterButton"
+                    text="Status ▾"
+                    styleClass="filter-button-small"/>
+
+        </HBox>
+
+        <!-- SCROLLPANE sa karticom i tabelom (isti fazon kao Filmovi) -->
+        <ScrollPane fx:id="partnersScroll"
+                    fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="ALWAYS"
+                    styleClass="partners-scroll">
+
+            <VBox styleClass="partners-table-wrapper">
+
+                <TableView fx:id="partnerTable"
+                           styleClass="partners-table"
+                           prefHeight="420">
+
+                    <columns>
+                        <TableColumn fx:id="colNaziv" text="Naziv"/>
+                        <TableColumn fx:id="colGrad" text="Grad"/>
+                        <TableColumn fx:id="colKontaktOsoba" text="Kontakt Osoba"/>
+                        <TableColumn fx:id="colEmail" text="Email"/>
+                        <TableColumn fx:id="colTelefon" text="Telefon"/>
+                        <TableColumn fx:id="colDetalji" text="Detalji"/>
+                    </columns>
+
+                </TableView>
+
+            </VBox>
+
+        </ScrollPane>
+
+    </VBox>
+
+</AnchorPane>

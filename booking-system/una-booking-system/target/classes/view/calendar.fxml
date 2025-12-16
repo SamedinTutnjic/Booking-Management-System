@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ba.una.booking.controller.BookingCalendarController"
+            styleClass="calendar-root">
+
+    <!-- GORE: naslov + filteri + navigacija -->
+    <top>
+        <VBox spacing="18">
+            <padding>
+                <Insets top="20" right="40" bottom="10" left="40"/>
+            </padding>
+
+            <Label text="Booking kalendar" styleClass="page-title"/>
+
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <VBox spacing="4">
+                    <Label text="Film" styleClass="filter-label"/>
+                    <ComboBox fx:id="filmFilter"
+
+                              prefWidth="180"/>
+                </VBox>
+
+                <VBox spacing="4">
+                    <Label text="Partner" styleClass="filter-label"/>
+                    <ComboBox fx:id="partnerFilter"
+
+                              prefWidth="180"/>
+                </VBox>
+
+                <VBox spacing="4">
+                    <Label text="Status" styleClass="filter-label"/>
+                    <ComboBox fx:id="statusFilter"
+
+                              prefWidth="180"/>
+                </VBox>
+
+                <Pane HBox.hgrow="ALWAYS"/>
+
+                <Button fx:id="resetFiltersButton"
+                        text="Reset filtera"
+                        styleClass="primary-outline-btn"/>
+            </HBox>
+
+            <HBox spacing="8" alignment="CENTER_RIGHT">
+                <Button fx:id="prevMonthButton" text="«" styleClass="calendar-nav-btn"/>
+                <Label fx:id="monthLabel" text="Decembar 2025" styleClass="month-label"/>
+                <Button fx:id="nextMonthButton" text="»" styleClass="calendar-nav-btn"/>
+                <Button fx:id="todayButton" text="Danas" styleClass="primary-solid-btn"/>
+            </HBox>
+
+        </VBox>
+    </top>
+
+    <!-- CENTAR: grid -->
+    <center>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="5" right="40" bottom="30" left="40"/>
+            </padding>
+
+            <!-- Nazivi dana -->
+            <GridPane hgap="2" vgap="2" styleClass="calendar-grid-header">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                </columnConstraints>
+
+                <children>
+                    <Label text="PON" GridPane.columnIndex="0" styleClass="calendar-header"/>
+                    <Label text="UTO" GridPane.columnIndex="1" styleClass="calendar-header"/>
+                    <Label text="SRI" GridPane.columnIndex="2" styleClass="calendar-header"/>
+                    <Label text="ČET" GridPane.columnIndex="3" styleClass="calendar-header"/>
+                    <Label text="PET" GridPane.columnIndex="4" styleClass="calendar-header"/>
+                    <Label text="SUB" GridPane.columnIndex="5" styleClass="calendar-header"/>
+                    <Label text="NED" GridPane.columnIndex="6" styleClass="calendar-header"/>
+                </children>
+            </GridPane>
+
+            <!-- Grid sa danima -->
+            <GridPane fx:id="calendarGrid"
+                      hgap="6" vgap="6"
+                      VBox.vgrow="ALWAYS"
+                      styleClass="calendar-grid">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                    <ColumnConstraints percentWidth="14.285"/>
+                </columnConstraints>
+            </GridPane>
+        </VBox>
+    </center>
+
+</BorderPane>

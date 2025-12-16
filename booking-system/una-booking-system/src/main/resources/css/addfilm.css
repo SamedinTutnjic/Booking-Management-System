@@ -1,0 +1,395 @@
+/* ====== ADD FORME (DODAJ FILM / DODAJ PARTNERA) ====== */
+
+/* cijela stranica */
+.add-page-root {
+    -fx-background-color: #ffffff;
+}
+
+/* glavni card u sredini */
+.add-form-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 24;
+    -fx-padding: 28 32 28 32;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.12), 24, 0.18, 0, 8);
+}
+
+/* breadcrumb u gornjem desnom čošku (Filmovi / Dodaj film) */
+.add-form-breadcrumb {
+    -fx-font-size: 12;
+    -fx-text-fill: #6B7280;
+}
+
+/* mali sivkasti label iznad naslova */
+.add-form-subtitle {
+    -fx-font-size: 12;
+    -fx-text-fill: #9CA3AF;
+}
+
+/* veliki naslov forme (Dodaj film / Dodaj partnera) */
+.add-form-title {
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* layout za formu – dva stupca na širem ekranu */
+.add-form-grid {
+    -fx-hgap: 32;
+    -fx-vgap: 16;
+}
+
+/* label iznad polja u formi */
+.add-form-label {
+    -fx-font-size: 13;
+    -fx-text-fill: #4B5563;
+}
+
+/* input polja u formi – malo šire od login inputa */
+.add-form-input {
+    -fx-background-color: #F9FAFB;
+    -fx-text-fill: #111827;
+    -fx-padding: 10 14 10 14;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-font-size: 13;
+}
+
+.add-form-input:focused {
+    -fx-border-color: #3B82F6;
+    -fx-background-color: #ffffff;
+}
+
+/* combobox za status / tip partnera itd */
+.add-form-combo {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-padding: 2 8 2 8;
+    -fx-font-size: 13;
+}
+
+.add-form-combo:focused {
+    -fx-border-color: #3B82F6;
+    -fx-background-color: #ffffff;
+}
+
+/* donja traka (Cancel / Spremi + strelice lijevo/desno) */
+.add-form-footer {
+    -fx-padding: 16 0 0 0;
+}
+
+/* lijeve strelice za prelaz između formi */
+.add-form-nav-btn {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-padding: 6 10 6 10;
+    -fx-border-color: #E5E7EB;
+    -fx-font-size: 13;
+    -fx-text-fill: #374151;
+    -fx-cursor: hand;
+}
+
+.add-form-nav-btn:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* plavo primarno dugme "Spremi" */
+.add-form-primary-btn {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-padding: 8 20 8 20;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.add-form-primary-btn:hover {
+    -fx-background-color: #2563EB;
+}
+
+/* sivo "Odustani" */
+.add-form-secondary-btn {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+    -fx-padding: 8 18 8 18;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.add-form-secondary-btn:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* ========== ADD / EDIT FORMS (FILM + PARTNER) ========== */
+
+/* cijela stranica – tamna pozadina kao overlay */
+.add-form-root {
+    -fx-background-color: #0F172A;   /* tamno plava/blijedo crna */
+    -fx-padding: 32 40 32 40;
+}
+
+/* bijeli panel u sredini */
+.add-form-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 18;
+    -fx-padding: 28 36 28 36;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.35), 30, 0.25, 0, 18);
+}
+
+/* gornji header u kartici (naslov + X) */
+.add-form-header {
+    -fx-padding: 0 0 20 0;
+}
+
+/* veliki naslov "Dodaj/Uredi Film", "Dodaj/Uredi Partnera" */
+.add-form-title {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* X dugme desno (close) */
+.add-form-close {
+    -fx-font-size: 20;
+    -fx-text-fill: #6B7280;
+    -fx-cursor: hand;
+}
+
+.add-form-close:hover {
+    -fx-text-fill: #111827;
+}
+
+/* mali label gore lijevo "FORMULAR" u tvojim screenovima */
+.add-form-badge {
+    -fx-font-size: 11;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9CA3AF;
+    -fx-letter-spacing: 2;
+}
+
+/* podnaslovi iznad inputa ("Naziv filma", "Godina"... ) */
+.add-form-label {
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* obični inputi u formi (TextField) */
+.add-form-input {
+    -fx-background-color: #F9FAFB;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 10 12 10 12;
+    -fx-font-size: 13;
+}
+
+.add-form-input:focused {
+    -fx-border-color: #2563EB;
+    -fx-background-color: #FFFFFF;
+}
+
+/* TextArea (opis, napomena, detalji) – bez duplog unutrašnjeg bordera */
+.add-form-textarea {
+    -fx-background-color: #F9FAFB;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 10 12 10 12;
+    -fx-font-size: 13;
+    -fx-background-insets: 0;      /* bitno */
+}
+
+/* unutrašnji content TextArea-e – bez svog okvira */
+.add-form-textarea .content {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.add-form-textarea:focused {
+    -fx-border-color: #2563EB;
+    -fx-background-color: #FFFFFF;
+}
+
+
+/* dropdown / status dugmad – da liče na Figmu */
+.add-form-combo {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 13;
+}
+
+/* donja linija "breadcrumbs": Filmovi / Dodaj film */
+.add-form-breadcrumbs {
+    -fx-font-size: 12;
+    -fx-text-fill: #6B7280;
+}
+
+/* dno forme – Save/Cancel */
+.add-form-footer {
+    -fx-padding: 24 0 0 0;
+}
+
+/* plavo Save dugme (pravougaono, kao na Figmi) */
+.add-form-save-btn {
+    -fx-background-color: #2563EB;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-padding: 8 32 8 32;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+.add-form-save-btn:hover {
+    -fx-background-color: #1D4ED8;
+}
+
+/* sivo Cancel dugme */
+.add-form-cancel-btn {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #111827;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-padding: 8 28 8 28;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.add-form-cancel-btn:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* lijevi donji button "← Dodaj partnera" / "← Dodaj film" */
+.add-form-switch-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #111827;
+    -fx-font-size: 13;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.add-form-switch-btn:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+.add-form-footer .pagination-button {
+    -fx-background-color: #F3F4F6;
+    -fx-border-color: #E5E7EB;
+}
+
+.add-form-footer .pagination-button:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+.add-form-danger-btn {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 8 26 8 26;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.add-form-danger-btn:hover {
+    -fx-background-color: #dc2626;
+}
+
+/* ============================================================
+   PATCH: ComboBox placeholder (prompt) + ljepši scrollbar u listi
+   ============================================================ */
+
+/* 1) prompt/placeholder boja za ComboBox (Odaberi status/žanr) */
+.add-form-combo .list-cell {
+    -fx-text-fill: #111827; /* normalan tekst */
+}
+
+/* Kad nema selekcije, button-cell je "empty" i prikazuje prompt */
+.add-form-combo .list-cell:empty {
+    -fx-text-fill: #9CA3AF; /* placeholder siva kao na drugim mjestima */
+}
+
+/* (sigurnosno) i sama text boja u comboboxu */
+.add-form-combo .text {
+    -fx-fill: #111827;
+}
+
+/* 2) dropdown lista (popup) styling */
+.combo-box-popup > .list-view {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 10;
+    -fx-padding: 6;
+}
+
+/* list items */
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 8 10 8 10;
+    -fx-font-size: 13;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 8;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: rgba(59,130,246,0.12);
+    -fx-background-radius: 8;
+}
+
+/* 3) scrollbar moderniji */
+.combo-box-popup .list-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+    -fx-padding: 2;
+}
+
+.combo-box-popup .list-view .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(17,24,39,0.25);
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+}
+
+.combo-box-popup .list-view .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(17,24,39,0.35);
+}
+
+/* makni strelice (arrow buttons) na scrollbar-u ako se pojave */
+.combo-box-popup .list-view .scroll-bar:vertical .increment-button,
+.combo-box-popup .list-view .scroll-bar:vertical .decrement-button {
+    -fx-padding: 0;
+    -fx-opacity: 0;
+}

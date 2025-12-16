@@ -1,0 +1,1954 @@
+/* GLOBALNI FONT */
+.root {
+    -fx-font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+}
+
+/* GLAVNA POZADINA LOGIN SCRENA */
+.root-background {
+    -fx-background-color: white;
+}
+
+/* ========== LOGIN LAYOUT ========== */
+
+/* Lijevi panel (logo) */
+.login-left {
+    -fx-background-color: white;
+    -fx-pref-width: 550;
+    -fx-alignment: CENTER;
+    -fx-spacing: 20;
+}
+
+/* Desni panel (forma) */
+.login-right {
+    -fx-background-color: #0F172A; /* tamno plava */
+    -fx-pref-width: 650;
+    -fx-padding: 80 90 80 90;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 22;
+    -fx-font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+}
+
+.login-subtitle {
+    -fx-text-fill: #6B7280;
+    -fx-font-size: 20;
+    -fx-padding: 12 0 0 0;
+    -fx-font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+}
+
+/* LABELS */
+.form-label {
+    -fx-text-fill: #E2E8F0;
+    -fx-font-size: 13;
+    -fx-padding: 0 0 4 6;
+}
+
+/* INPUT POLJA */
+.input-field {
+    -fx-background-color: #F1F5F9;
+    -fx-text-fill: #15203b;
+    -fx-padding: 14 18 14 18;
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: transparent;
+    -fx-font-size: 14;
+    -fx-pref-width: 360;
+}
+
+.input-field:focused {
+    -fx-border-color: #3B82F6;
+    -fx-border-width: 1.5;
+    -fx-background-color: #FFFFFF;
+}
+
+/* PLAVO ZAOBLJENO LOGIN DUGME – KORISTI SE SAMO NA LOGINU */
+.primary-button {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-padding: 14 0 14 0;
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+    -fx-pref-width: 360;
+    -fx-background-radius: 22;
+    -fx-border-radius: 22;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.45), 12, 0.2, 0, 3);
+}
+
+.primary-button:hover {
+    -fx-background-color: #2563EB;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #1D4ED8;
+    -fx-translate-y: 1;
+}
+
+/* ERROR LABEL */
+.error-label {
+    -fx-text-fill: #EF4444;
+    -fx-font-size: 13;
+    -fx-padding: 8 0 0 6;
+}
+
+/* FOOTER TEKST */
+.login-footer {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 12;
+    -fx-padding: 10 0 0 6;
+}
+
+/* ========== APP LAYOUT (MAIN) ========== */
+
+/* CIJELI PROZOR */
+.app-root {
+    -fx-background-color: #111827; /* tamno samo iza sidebar-a */
+}
+
+/* LIJEVI SIDEBAR */
+.sidebar {
+    -fx-background-color: #111827;
+    -fx-pref-width: 80;
+}
+
+/* IKONICE U SIDEBARU – osnovni stil */
+.sidebar-btn,
+.sidebar-btn:focused,
+.sidebar-btn:armed,
+.sidebar-btn:default {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E5E7EB;
+    -fx-font-size: 20;
+    -fx-min-width: 80;
+    -fx-max-width: 80;
+    -fx-padding: 10 0 10 0;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-cursor: hand;
+
+    /* makni plavi/bijeli fokus okvir */
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* sve ikonice malo “ugašene” po defaultu */
+.sidebar-btn ImageView {
+    -fx-opacity: 0.75;
+}
+
+/* hover preko običnih ikonica */
+.sidebar-btn:hover {
+    -fx-background-color: #1F2937;
+}
+
+/* AKTIVNI BUTTON – nema pločice iza, samo jača ikonica */
+.sidebar-btn-active,
+.sidebar-btn-active:hover,
+.sidebar-btn-active:focused,
+.sidebar-btn-active:armed,
+.sidebar-btn-active:default {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-effect: null;
+}
+
+/* aktivna ikona: malo veća i punog intenziteta */
+.sidebar-btn-active ImageView {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-opacity: 1.0;
+}
+
+/* LOGOUT dugme na dnu – isti stil kao ostale ikonice */
+.logout-btn,
+.logout-btn:hover,
+.logout-btn:focused,
+.logout-btn:armed,
+.logout-btn:default {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* samo hover boja ako želiš blagu crvenu pozadinu (po želji) */
+.logout-btn:hover {
+    -fx-background-color: #7F1D1D33;   /* blago crvenkasto, 20% opacity */
+}
+
+/* ikonica logout-a */
+.logout-btn ImageView {
+    -fx-opacity: 0.9;
+}
+
+/* DESNA PODLOGA */
+.content-bg {
+    -fx-background-color: #F9FAFB;
+    -fx-padding: 24 32 24 0;
+}
+
+/* ========== MAIN PAGE (DASHBOARD) ========== */
+
+.page {
+    -fx-padding: 32 40 32 40;
+    -fx-background-color: #F9FAFB;
+}
+
+.page-title {
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.section-title {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* STAT KARTICE */
+
+.stat-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 16 20 16 20;
+}
+
+.stat-number {
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.stat-label {
+    -fx-font-size: 13;
+    -fx-text-fill: #6B7280;
+}
+
+/* NASLOVI IZNAD GRAFOVA */
+
+.chart-title {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* QUICK ACTIONS DESNO */
+
+.quick-action-box {
+    -fx-background-color: #E5E7EB;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1;
+    -fx-padding: 10 16 10 16;
+    -fx-cursor: hand;
+}
+
+.quick-action-box:hover {
+    -fx-background-color: #D1D5DB;
+}
+
+/* krug s plusom */
+
+.quick-action-icon-circle {
+    -fx-background-color: #1F2937;
+       -fx-background-radius: 999;
+       -fx-min-width: 28;
+       -fx-min-height: 28;
+       -fx-max-width: 28;
+       -fx-max-height: 28;
+
+       /* BITNO */
+       -fx-alignment: CENTER;
+}
+
+.quick-action-icon-plus {
+     -fx-text-fill: white;
+      -fx-font-size: 17px;
+      -fx-font-weight: 700;
+
+      /* OVO GA SAVRŠENO CENTRIRA */
+      -fx-alignment: CENTER;
+      -fx-text-alignment: CENTER;
+      -fx-label-padding: 0;
+      -fx-translate-y:-1;
+}
+
+/* tekst desno od ikone */
+
+.quick-action-text {
+    -fx-text-fill: #111827;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.app-header-title {
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* ====== OPĆI STIL ZA STRANICE (DASHBOARD / FILMOVI / PARTNERI) ====== */
+
+.page-background {
+    -fx-background-color: #ffffff;
+}
+
+/* linija ispod naslova Filmovi / Partneri */
+.page-separator *.line {
+    -fx-background-color: #111827;
+    -fx-pref-height: 1;
+}
+
+/* DUGMAD, SEARCH, FILTERI ZA UNUTRAŠNJE STRANICE (npr. FILMOVI, PARTNERI) */
+
+/* Manje tamno dugme – koristi se na unutrašnjim stranicama (+ Dodaj ...) */
+.primary-button-small {
+    -fx-background-color: #233351;
+    -fx-text-fill: white;
+    -fx-padding: 8 22 8 22;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+}
+
+.primary-button-small:hover {
+    -fx-background-color: #1b2940;
+}
+
+/* WRAPPER ZA SEARCH POLJE SA LUPOM */
+.search-field-wrapper {
+    -fx-background-color: #f9fafb;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 1;
+    -fx-border-radius: 999;
+    -fx-background-radius: 999;
+    -fx-padding: 0;
+}
+
+/* sam TextField unutra */
+.search-field-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 999;
+    -fx-padding: 6 18 6 32;
+    -fx-prompt-text-fill: #9e9e9e;
+    -fx-font-size: 13;
+    -fx-min-width: 220;
+}
+
+/* lupa */
+.search-icon {
+    -fx-padding: 0 0 0 14;
+    -fx-text-fill: #3B82F6; /* plava kao login dugme */
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-translate-y: 1;
+}
+
+/* filter dugmad desno */
+.filter-button {
+    -fx-background-color: #f9fafb;
+    -fx-background-radius: 8;
+    -fx-padding: 6 16 6 16;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-font-size: 13;
+}
+
+.filter-button:hover {
+    -fx-background-color: #eef2ff;
+}
+
+/* paginacija dolje */
+.pagination-button {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 4;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-padding: 4 10 4 10;
+}
+
+/* STATUS BADGE */
+
+.status-badge-active {
+    -fx-background-color: #4ade80; /* zelena */
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 2 12 2 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.status-badge-inactive {
+    -fx-background-color: #f97373; /* crvena */
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 2 12 2 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* DUGME "Detalji" U TABELI – PLAVO */
+
+.details-button {
+    -fx-background-color: #3B82F6; /* plava kao login dugme */
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 4 18 4 18;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.details-button:hover {
+    -fx-background-color: #2563EB;
+}
+
+.details-button:pressed {
+    -fx-background-color: #1D4ED8;
+}
+
+/* ================================================================
+      TABELA: FILMOVI / PARTNERI / BOOKING – Figma 1:1
+   ================================================================ */
+
+/* okvir oko tabele */
+.film-table-wrapper,
+.partner-table-wrapper,
+.booking-table-wrapper {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #111827;
+    -fx-border-width: 2;
+}
+
+/* osnovni stil za tabele */
+.table-view.film-table,
+.table-view.partner-table,
+.table-view.booking-table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+/* header pozadina i donja linija */
+.table-view.film-table .column-header-background,
+.table-view.partner-table .column-header-background,
+.table-view.booking-table .column-header-background {
+    -fx-background-color: #f3f4f6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent transparent #111827 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* pojedinačni headeri – vertikalne linije između kolona */
+.table-view.film-table .column-header,
+.table-view.partner-table .column-header,
+.table-view.booking-table .column-header {
+    -fx-border-color: transparent #111827 transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* sakrij filler */
+.table-view.film-table .filler,
+.table-view.partner-table .filler,
+.table-view.booking-table .filler,
+.table-view.film-table .column-header-background .filler,
+.table-view.partner-table .column-header-background .filler,
+.table-view.booking-table .column-header-background .filler {
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-width: 0;
+}
+
+/* tekst headera */
+.table-view.film-table .column-header .label,
+.table-view.partner-table .column-header .label,
+.table-view.booking-table .column-header .label {
+    -fx-text-fill: #111827;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 6 8 6 8;
+    -fx-font-size: 14;
+}
+
+/* redovi – samo donja linija */
+.table-view.film-table .table-row-cell,
+.table-view.partner-table .table-row-cell,
+.table-view.booking-table .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #111827;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 42;
+}
+
+/* bez sivih alternacija */
+.table-view.film-table .table-row-cell:odd,
+.table-view.partner-table .table-row-cell:odd,
+.table-view.booking-table .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+/* selektovani red */
+.table-view.film-table .table-row-cell:selected,
+.table-view.partner-table .table-row-cell:selected,
+.table-view.booking-table .table-row-cell:selected {
+    -fx-background-color: #eef2ff;
+}
+
+/* ćelije */
+.table-view.film-table .table-cell,
+.table-view.partner-table .table-cell,
+.table-view.booking-table .table-cell {
+    -fx-padding: 6 8 6 8;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 13;
+}
+
+
+
+/* ================================================================
+      BOOKING – DODATNA FIGMA STILIZACIJA
+   ================================================================ */
+
+/* više prostora oko tabele (da izgleda kao u Figma-u) */
+.booking-table-wrapper {
+    -fx-padding: 12 24 20 24;
+}
+
+/* ukloni plavi fokus highlight */
+.table-view.booking-table:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* header malo tanji */
+.table-view.booking-table .column-header-background {
+    -fx-padding: 0 0 4 0;
+}
+
+/* redovi u Booking tabeli malo veći */
+.table-view.booking-table .table-row-cell {
+    -fx-cell-size: 48; /* Preporučeno: 44–52 */
+}
+
+/* tekst u Booking tabeli malo veći */
+.table-view.booking-table .table-cell {
+    -fx-font-size: 14;
+}
+
+
+/* ========== SETTINGS PROZOR ========== */
+
+.settings-root {
+    -fx-background-color: transparent;
+}
+
+.settings-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 18;
+    -fx-padding: 20 22 22 22;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.18), 20, 0.2, 0, 6);
+}
+
+.settings-title {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.settings-close-button {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 4 8 4 8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.settings-close-button:hover {
+    -fx-background-color: #2563EB;
+}
+
+.settings-avatar {
+    -fx-fill: linear-gradient(to bottom, #3B82F6, #1D4ED8);
+}
+
+.settings-username {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.settings-role {
+    -fx-font-size: 13;
+    -fx-text-fill: #6B7280;
+}
+
+.settings-subtitle {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* toggle za temu */
+.theme-toggle {
+    -fx-background-color: #E5E7EB;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 999;
+    -fx-padding: 4 18 4 18;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.theme-toggle:selected {
+    -fx-background-color: #111827;
+    -fx-text-fill: #ffffff;
+}
+
+/* ===== POSTAVKE (SETTINGS) ===== */
+
+.settings-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 24;
+    -fx-padding: 32 40 32 40;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.10), 30, 0.15, 0, 10);
+}
+
+/* header unutar kartice */
+.settings-card-header {
+    -fx-padding: 0 4 0 4;
+}
+
+.settings-card-header-title {
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* plavo okruglo dugme sa tri tačke */
+.settings-menu-button {
+    -fx-background-color: #2563EB;
+    -fx-background-radius: 999;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+    -fx-max-width: 32;
+    -fx-max-height: 32;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.settings-menu-icon {
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+/* avatar krug (plava pozadina) */
+.settings-avatar-wrapper {
+    -fx-background-color: #2563EB;
+    -fx-background-radius: 999;
+    -fx-min-width: 120;
+    -fx-min-height: 120;
+    -fx-max-width: 120;
+    -fx-max-height: 120;
+    -fx-alignment: center;
+}
+
+/* da je slika fino u centru */
+.settings-avatar-wrapper .image-view {
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.20), 18, 0.2, 0, 4);
+}
+
+/* ime uloge (Admin) */
+.settings-name {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* opis uloge (Una Film Admin) */
+.settings-role {
+    -fx-font-size: 13;
+    -fx-text-fill: #4B5563;
+}
+
+/* unutrašnji separator */
+.settings-inner-separator *.line {
+    -fx-background-color: #E5E7EB;
+}
+
+/* label "Tema" */
+.settings-section-label {
+    -fx-font-size: 13;
+    -fx-text-fill: #111827;
+}
+
+/* Toggle za temu – sunce / mjesec */
+.theme-toggle {
+    -fx-background-color: #e5e7eb;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-padding: 4 18 4 18;
+    -fx-border-color: transparent;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+    -fx-cursor: hand;
+}
+
+.theme-toggle:hover {
+    -fx-background-color: #d1d5db;
+}
+
+.theme-toggle:selected {
+    -fx-background-color: #111827;
+    -fx-text-fill: #f9fafb;
+}
+
+/* ====== ADD FORME (DODAJ FILM / DODAJ PARTNERA) ====== */
+
+/* cijela stranica */
+.add-page-root {
+    -fx-background-color: #ffffff;
+}
+
+/* glavni card u sredini */
+.add-form-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 24;
+    -fx-padding: 28 32 28 32;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.12), 24, 0.18, 0, 8);
+}
+
+/* breadcrumb u gornjem desnom čošku (Filmovi / Dodaj film) */
+.add-form-breadcrumb {
+    -fx-font-size: 12;
+    -fx-text-fill: #6B7280;
+}
+
+/* mali sivkasti label iznad naslova */
+.add-form-subtitle {
+    -fx-font-size: 12;
+    -fx-text-fill: #9CA3AF;
+}
+
+/* veliki naslov forme (Dodaj film / Dodaj partnera) */
+.add-form-title {
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* layout za formu – dva stupca na širem ekranu */
+.add-form-grid {
+    -fx-hgap: 32;
+    -fx-vgap: 16;
+}
+
+/* label iznad polja u formi */
+.add-form-label {
+    -fx-font-size: 13;
+    -fx-text-fill: #4B5563;
+}
+
+/* input polja u formi – malo šire od login inputa */
+.add-form-input {
+    -fx-background-color: #F9FAFB;
+    -fx-text-fill: #111827;
+    -fx-padding: 10 14 10 14;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-font-size: 13;
+}
+
+.add-form-input:focused {
+    -fx-border-color: #3B82F6;
+    -fx-background-color: #ffffff;
+}
+
+/* combobox za status / tip partnera itd */
+.add-form-combo {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-padding: 2 8 2 8;
+    -fx-font-size: 13;
+}
+
+.add-form-combo:focused {
+    -fx-border-color: #3B82F6;
+    -fx-background-color: #ffffff;
+}
+
+/* donja traka (Cancel / Spremi + strelice lijevo/desno) */
+.add-form-footer {
+    -fx-padding: 16 0 0 0;
+}
+
+/* lijeve strelice za prelaz između formi */
+.add-form-nav-btn {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-padding: 6 10 6 10;
+    -fx-border-color: #E5E7EB;
+    -fx-font-size: 13;
+    -fx-text-fill: #374151;
+    -fx-cursor: hand;
+}
+
+.add-form-nav-btn:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* plavo primarno dugme "Spremi" */
+.add-form-primary-btn {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-padding: 8 20 8 20;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.add-form-primary-btn:hover {
+    -fx-background-color: #2563EB;
+}
+
+/* sivo "Odustani" */
+.add-form-secondary-btn {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+    -fx-padding: 8 18 8 18;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.add-form-secondary-btn:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* ========== ADD / EDIT FORMS (FILM + PARTNER) ========== */
+
+/* cijela stranica – tamna pozadina kao overlay */
+.add-form-root {
+    -fx-background-color: #0F172A;   /* tamno plava/blijedo crna */
+    -fx-padding: 32 40 32 40;
+}
+
+/* bijeli panel u sredini */
+.add-form-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 18;
+    -fx-padding: 28 36 28 36;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.35), 30, 0.25, 0, 18);
+}
+
+/* gornji header u kartici (naslov + X) */
+.add-form-header {
+    -fx-padding: 0 0 20 0;
+}
+
+/* veliki naslov "Dodaj/Uredi Film", "Dodaj/Uredi Partnera" */
+.add-form-title {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* X dugme desno (close) */
+.add-form-close {
+    -fx-font-size: 20;
+    -fx-text-fill: #6B7280;
+    -fx-cursor: hand;
+}
+
+.add-form-close:hover {
+    -fx-text-fill: #111827;
+}
+
+/* mali label gore lijevo "FORMULAR" u tvojim screenovima */
+.add-form-badge {
+    -fx-font-size: 11;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9CA3AF;
+    -fx-letter-spacing: 2;
+}
+
+/* podnaslovi iznad inputa ("Naziv filma", "Godina"... ) */
+.add-form-label {
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* obični inputi u formi (TextField) */
+.add-form-input {
+    -fx-background-color: #F9FAFB;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 10 12 10 12;
+    -fx-font-size: 13;
+}
+
+.add-form-input:focused {
+    -fx-border-color: #2563EB;
+    -fx-background-color: #FFFFFF;
+}
+
+/* TextArea (opis, napomena, detalji) – bez duplog unutrašnjeg bordera */
+.add-form-textarea {
+    -fx-background-color: #F9FAFB;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 10 12 10 12;
+    -fx-font-size: 13;
+    -fx-background-insets: 0;      /* bitno */
+}
+
+/* unutrašnji content TextArea-e – bez svog okvira */
+.add-form-textarea .content {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.add-form-textarea:focused {
+    -fx-border-color: #2563EB;
+    -fx-background-color: #FFFFFF;
+}
+
+
+/* dropdown / status dugmad – da liče na Figmu */
+.add-form-combo {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 13;
+}
+
+/* donja linija "breadcrumbs": Filmovi / Dodaj film */
+.add-form-breadcrumbs {
+    -fx-font-size: 12;
+    -fx-text-fill: #6B7280;
+}
+
+/* dno forme – Save/Cancel */
+.add-form-footer {
+    -fx-padding: 24 0 0 0;
+}
+
+/* plavo Save dugme (pravougaono, kao na Figmi) */
+.add-form-save-btn {
+    -fx-background-color: #2563EB;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-padding: 8 32 8 32;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+.add-form-save-btn:hover {
+    -fx-background-color: #1D4ED8;
+}
+
+/* sivo Cancel dugme */
+.add-form-cancel-btn {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #111827;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-padding: 8 28 8 28;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.add-form-cancel-btn:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* lijevi donji button "← Dodaj partnera" / "← Dodaj film" */
+.add-form-switch-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #111827;
+    -fx-font-size: 13;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.add-form-switch-btn:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+.add-form-footer .pagination-button {
+    -fx-background-color: #F3F4F6;
+    -fx-border-color: #E5E7EB;
+}
+
+.add-form-footer .pagination-button:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+.add-form-danger-btn {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 8 26 8 26;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.add-form-danger-btn:hover {
+    -fx-background-color: #dc2626;
+}
+
+/* === FIX ZA UNUTRAŠNJI BORDER U TEXTAREA (Film/Partner/Booking) === */
+
+.add-form-textarea {
+    -fx-background-color: #F9FAFB;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 10 12 10 12;
+}
+
+/* Uklanja unutrašnji bijeli border i padding */
+.add-form-textarea .content {
+    -fx-background-color: transparent !important;
+    -fx-padding: 0 !important;
+    -fx-background-insets: 0 !important;
+    -fx-border-insets: 0 !important;
+    -fx-border-width: 0 !important;
+}
+
+/* ==== FIX za TextArea (Opis, Napomena, Detalji) – makni unutrašnji box ==== */
+
+/* vanjski dio TextArea */
+.text-area.add-form-input,
+.text-area.add-form-textarea {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 10 14 10 14;
+}
+
+/* unutrašnji content – bez posebne pozadine i paddinga */
+.text-area.add-form-input .content,
+.text-area.add-form-textarea .content {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+/* ==== FIX: TextArea (Opis / Napomena / Detalji) bez unutrašnjeg boxa ==== */
+
+/* vanjski okvir – isti kao obični input */
+.text-area.add-form-input,
+.text-area.add-form-textarea {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 10 14 10 14;
+}
+
+/* unutrašnji ScrollPane */
+.text-area.add-form-input > .scroll-pane,
+.text-area.add-form-textarea > .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* viewport unutar ScrollPane-a */
+.text-area.add-form-input > .scroll-pane > .viewport,
+.text-area.add-form-textarea > .scroll-pane > .viewport {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* stvarni content (gdje stoji tekst) */
+.text-area.add-form-input > .scroll-pane > .viewport > .content,
+.text-area.add-form-textarea > .scroll-pane > .viewport > .content {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+
+/* === BOOKING KALENDAR (FINAL) === */
+
+.calendar-root {
+    -fx-background-color: #F4F5F7;
+}
+
+/* label iznad filter comboboxa */
+.calendar-root .filter-label {
+    -fx-font-size: 13;
+    -fx-text-fill: #6B7280;
+}
+
+/* samo comboboxi unutar kalendara */
+.calendar-root .combo-box {
+    -fx-background-color: #E5E7EB;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: transparent;
+    -fx-padding: 2 10 2 10;
+    -fx-font-size: 13;
+}
+
+.calendar-root .combo-box:hover {
+    -fx-background-color: #D1D5DB;
+}
+
+.calendar-root .combo-box .list-cell {
+    -fx-text-fill: #111827;
+}
+
+/* dugme Reset filtera – scoped na kalendar da ne utiče drugdje */
+.calendar-root .primary-outline-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #111827;
+    -fx-border-radius: 40;
+    -fx-background-radius: 40;
+    -fx-padding: 6 18;
+    -fx-text-fill: #111827;
+    -fx-font-weight: 600;
+    -fx-font-size: 13;
+    -fx-cursor: hand;
+}
+
+.calendar-root .primary-outline-btn:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* dugme Danas – plava kao ostali primary elementi */
+.calendar-root .primary-solid-btn {
+    -fx-background-color: #3B82F6;   /* primary blue */
+    -fx-text-fill: white;
+    -fx-background-radius: 40;
+    -fx-padding: 6 20;
+    -fx-font-weight: 600;
+    -fx-font-size: 13;
+    -fx-cursor: hand;
+}
+
+.calendar-root .primary-solid-btn:hover {
+    -fx-background-color: #2563EB;   /* malo tamnija na hover */
+}
+
+
+/* strelice lijevo/desno */
+.calendar-root .calendar-nav-btn {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+    -fx-font-size: 13;
+    -fx-cursor: hand;
+}
+
+.calendar-root .calendar-nav-btn:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+/* label "Decembar 2025" */
+.calendar-root .month-label {
+    -fx-font-size: 16;
+    -fx-font-weight: 600;
+    -fx-text-fill: #111827;
+}
+
+/* header sa danima */
+.calendar-root .calendar-header {
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 12;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6B7280;
+    -fx-padding: 0 0 4 4;
+}
+
+/* okvir oko cijelog kalendara */
+.calendar-root .calendar-grid {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 14;
+    -fx-background-radius: 14;
+    -fx-padding: 6;
+}
+
+/* jedna ćelija dana */
+.calendar-root .calendar-day {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 4;
+}
+
+/* dan iz drugog mjeseca */
+.calendar-root .calendar-day-other-month {
+    -fx-opacity: 0.45;
+}
+
+/* broj dana (1,2,3...) */
+.calendar-root .calendar-day-label {
+    -fx-font-size: 13;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6B7280;
+}
+
+/* box za chipove unutar dana */
+.calendar-root .calendar-day-bookings {
+    -fx-spacing: 4;
+    -fx-padding: 4 0 0 0;
+}
+
+/* zajednički stil za chipove */
+.calendar-root .booking-chip {
+    -fx-padding: 5 10;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-font-size: 12;
+    -fx-wrap-text: true;
+}
+
+/* zeleni (Potvrđeno / Aquaman) */
+.calendar-root .booking-chip-confirmed {
+    -fx-background-color: #DCFCE7;
+    -fx-border-color: #A7F3D0;
+    -fx-border-width: 1;
+    -fx-text-fill: #166534;
+}
+
+/* plavi (Opcija / Godfather) */
+.calendar-root .booking-chip-option {
+    -fx-background-color: #DBEAFE;
+    -fx-border-color: #BFDBFE;
+    -fx-border-width: 1;
+    -fx-text-fill: #1D4ED8;
+}
+/* smanji padding unutar dana */
+.calendar-root .calendar-day {
+    -fx-padding: 3;            /* prije 4 */
+}
+
+/* manje prostora između labela i chipova */
+.calendar-root .calendar-day-bookings {
+    -fx-padding: 2 0 0 0;      /* prije 4 */
+    -fx-spacing: 3;            /* prije 4 */
+}
+
+/* smanji font broja dana */
+.calendar-root .calendar-day-label {
+    -fx-font-size: 12;         /* prije 13 */
+}
+
+/* boxovi (chipovi) malo kompaktniji */
+.calendar-root .booking-chip {
+    -fx-padding: 4 8;          /* prije 5 10 */
+    -fx-font-size: 11.5;       /* prije 12 */
+}
+
+.booking-tooltip {
+    -fx-background-color: #111827;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 8 10;
+    -fx-background-radius: 8;
+}
+
+.day-tooltip {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 10 12;
+    -fx-background-radius: 10;
+}
+.calendar-day-bookings {
+    -fx-padding: 6 0 0 0;
+    -fx-spacing: 6;
+    -fx-overflow: hidden;
+}
+
+
+/* ================================================================
+   BOOKING PAGE – KARTICE, DUGMAD, TABELA, STATUS BADGEVI
+   ================================================================ */
+
+/* ---------- PAGE / NASLOV ---------- */
+
+.page-background {
+    -fx-background-color: #F4F5F7;
+}
+
+.page {
+    -fx-background-color: transparent;
+    -fx-padding: 24 40 32 40;
+    -fx-spacing: 24;
+}
+
+.page-title {
+    -fx-font-size: 28;
+    -fx-font-weight: 700;
+    -fx-text-fill: #111827;
+}
+
+/* ---------- STAT KARTICE GORE (4 KOMADA) ---------- */
+
+.stat-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 16 22 16 22;
+}
+
+.stat-number {
+    -fx-font-size: 32;
+    -fx-font-weight: 700;
+    -fx-text-fill: #111827;
+}
+
+.stat-label {
+    -fx-font-size: 13;
+    -fx-text-fill: #6B7280;
+}
+
+/* ---------- GORNJA DUGMAD (+ DODAJ BOOKING / FILTER) ---------- */
+
+.primary-button-small {
+    -fx-background-color: #111827;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8 26 8 26;
+    -fx-background-radius: 8;
+    -fx-font-weight: 600;
+    -fx-font-size: 13;
+    -fx-cursor: hand;
+}
+
+.primary-button-small:hover {
+    -fx-background-color: #020617;
+}
+
+/* Filter dugme desno */
+.filter-button {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1;
+    -fx-font-size: 13;
+    -fx-text-fill: #111827;
+    -fx-padding: 7 18 7 18;
+    -fx-cursor: hand;
+}
+
+.filter-button:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* ---------- PAGINACIJA DOLJE ---------- */
+
+.pagination-button {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 4;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-padding: 4 10 4 10;
+    -fx-cursor: hand;
+}
+
+.pagination-button:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+/* ================================================================
+   TABELA: FILMOVI / PARTNERI / BOOKING – Figma 1:1
+   ================================================================ */
+
+/* okvir oko tabele */
+.film-table-wrapper,
+.partner-table-wrapper,
+.booking-table-wrapper {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #111827;
+    -fx-border-width: 2;
+    -fx-padding: 0;
+}
+
+/* osnovni stil za tabele */
+.table-view.film-table,
+.table-view.partner-table,
+.table-view.booking-table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+/* header pozadina i donja linija */
+.table-view.film-table .column-header-background,
+.table-view.partner-table .column-header-background,
+.table-view.booking-table .column-header-background {
+    -fx-background-color: #F3F4F6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent transparent #111827 transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 0 0 4 0;
+}
+
+/* pojedinačni headeri – vertikalne linije između kolona */
+.table-view.film-table .column-header,
+.table-view.partner-table .column-header,
+.table-view.booking-table .column-header {
+    -fx-border-color: transparent #111827 transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* sakrij filler */
+.table-view.film-table .filler,
+.table-view.partner-table .filler,
+.table-view.booking-table .filler,
+.table-view.film-table .column-header-background .filler,
+.table-view.partner-table .column-header-background .filler,
+.table-view.booking-table .column-header-background .filler {
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-width: 0;
+}
+
+/* tekst headera */
+.table-view.film-table .column-header .label,
+.table-view.partner-table .column-header .label,
+.table-view.booking-table .column-header .label {
+    -fx-text-fill: #111827;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 6 8 6 8;
+    -fx-font-size: 14;
+}
+
+/* redovi – samo donja linija */
+.table-view.film-table .table-row-cell,
+.table-view.partner-table .table-row-cell,
+.table-view.booking-table .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #111827;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 48;   /* malo viši red, kao u Figma */
+}
+
+/* bez sivih alternacija */
+.table-view.film-table .table-row-cell:odd,
+.table-view.partner-table .table-row-cell:odd,
+.table-view.booking-table .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+/* selektovani red */
+.table-view.film-table .table-row-cell:selected,
+.table-view.partner-table .table-row-cell:selected,
+.table-view.booking-table .table-row-cell:selected {
+    -fx-background-color: #EEF2FF;
+}
+
+/* ćelije */
+.table-view.film-table .table-cell,
+.table-view.partner-table .table-cell,
+.table-view.booking-table .table-cell {
+    -fx-padding: 6 10 6 10;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 13;
+}
+
+/* ukloni plavi fokus okvir sa tabele */
+.table-view.booking-table:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* ================================================================
+   DUGME "DETALJI" U TABELI
+   ================================================================ */
+
+.details-button {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 4 18 4 18;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.details-button:hover {
+    -fx-background-color: #2563EB;
+}
+
+.details-button:pressed {
+    -fx-background-color: #1D4ED8;
+}
+
+/* ================================================================
+   STATUS BADGEVI – POTVRĐENO / ODBIJENO / NA ČEKANJU
+   ================================================================ */
+
+.status-pill {
+    -fx-background-radius: 999;
+    -fx-padding: 3 12 3 12;
+    -fx-font-size: 12;
+    -fx-font-weight: 600;
+}
+
+/* Potvrđeno – zeleno */
+.status-pill-confirmed {
+    -fx-background-color: #BBF7D0;
+    -fx-text-fill: #166534;
+}
+
+/* Odbijeno – crveno */
+.status-pill-rejected {
+    -fx-background-color: #FEE2E2;
+    -fx-text-fill: #B91C1C;
+}
+
+/* Na čekanju – žuto */
+.status-pill-pending {
+    -fx-background-color: #FEF9C3;
+    -fx-text-fill: #92400E;
+}
+/* ================================================================
+   BOOKING PAGE – KARTICE, DUGMAD, TABELA, STATUS BADGEVI
+   ================================================================ */
+
+/* ---------- PAGE / NASLOV ---------- */
+
+.page-background {
+    -fx-background-color: #F4F5F7;
+}
+
+.page {
+    -fx-background-color: transparent;
+    -fx-padding: 24 40 24 40;    /* malo manji gornji/donji gap */
+    -fx-spacing: 20;
+}
+
+.page-title {
+    -fx-font-size: 28;
+    -fx-font-weight: 700;
+    -fx-text-fill: #111827;
+}
+
+/* ---------- STAT KARTICE GORE (4 KOMADA) ---------- */
+
+.stat-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 16 22 16 22;
+}
+
+.stat-number {
+    -fx-font-size: 32;
+    -fx-font-weight: 700;
+    -fx-text-fill: #111827;
+}
+
+.stat-label {
+    -fx-font-size: 13;
+    -fx-text-fill: #6B7280;
+}
+
+/* ---------- GORNJA DUGMAD (+ DODAJ BOOKING / FILTER) ---------- */
+
+/* plavo dugme – kao ostatak aplikacije */
+.primary-button-small {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8 26 8 26;
+    -fx-background-radius: 8;
+    -fx-font-weight: 600;
+    -fx-font-size: 13;
+    -fx-cursor: hand;
+}
+
+.primary-button-small:hover {
+    -fx-background-color: #2563EB;
+}
+
+/* Filter dugme desno */
+.filter-button {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1;
+    -fx-font-size: 13;
+    -fx-text-fill: #111827;
+    -fx-padding: 7 18 7 18;
+    -fx-cursor: hand;
+}
+
+.filter-button:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* ---------- PAGINACIJA DOLJE ---------- */
+
+.pagination-button {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 4;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-padding: 4 10 4 10;
+    -fx-cursor: hand;
+}
+
+.pagination-button:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+/* ================================================================
+   TABELA: BOOKING – modern Figma look
+   ================================================================ */
+
+/* okvir oko tabele – zaobljeni uglovi, tamni frame */
+.booking-table-wrapper {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #111827;
+    -fx-border-width: 2;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-padding: 0;
+}
+
+.table-view.booking-table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+/* header – svijetao, clean, donja linija manje agresivna */
+.table-view.booking-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #F9FAFB, #F3F4F6);
+    -fx-background-insets: 0;
+    -fx-background-radius: 12 12 0 0;  /* gore zaobljeno */
+    -fx-border-color: transparent transparent #D1D5DB transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 0 3 0;
+}
+
+/* pojedinačni headeri – fine vertikalne linije */
+.table-view.booking-table .column-header {
+    -fx-border-color: transparent #D1D5DB transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* sakrij onaj prazan “filler” u headeru */
+.table-view.booking-table .column-header-background .filler,
+.table-view.booking-table .filler {
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-width: 0;
+}
+
+/* tekst u headeru – Moderne, bold, centrirano */
+.table-view.booking-table .column-header .label {
+    -fx-text-fill: #111827;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER;
+    -fx-padding: 6 8 6 8;
+    -fx-font-size: 14;
+}
+
+/* redovi – tanja linija, manje visine da sve stane */
+.table-view.booking-table .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 44;
+}
+
+/* bez sivih alternacija */
+.table-view.booking-table .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+/* selektovani red – blaga plava */
+.table-view.booking-table .table-row-cell:selected {
+    -fx-background-color: #EEF2FF;
+}
+
+/* ćelije */
+.table-view.booking-table .table-cell {
+    -fx-padding: 6 10 6 10;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 13;
+}
+
+/* ukloni plavi fokus okvir sa tabele */
+.table-view.booking-table:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* sakrij horizontalni scroll bar (donji sivi prazan dio) */
+.table-view.booking-table .virtual-flow .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+/* malo zaobljeni donji uglovi “unutra” */
+.table-view.booking-table .virtual-flow {
+    -fx-background-radius: 0 0 12 12;
+}
+
+/* ================================================================
+   DUGME "DETALJI" U TABELI
+   ================================================================ */
+
+.details-button {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 4 18 4 18;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.details-button:hover {
+    -fx-background-color: #2563EB;
+}
+
+.details-button:pressed {
+    -fx-background-color: #1D4ED8;
+}
+
+/* ================================================================
+   STATUS BADGEVI – POTVRĐENO / ODBIJENO / NA ČEKANJU
+   ================================================================ */
+
+.status-pill {
+    -fx-background-radius: 999;
+    -fx-padding: 2 10 2 10;   /* manji badge da stane tekst */
+    -fx-font-size: 11.5;
+    -fx-font-weight: 600;
+}
+
+/* Potvrđeno – zeleno */
+.status-pill-confirmed {
+    -fx-background-color: #BBF7D0;
+    -fx-text-fill: #166534;
+}
+
+/* Odbijeno – crveno */
+.status-pill-rejected {
+    -fx-background-color: #FEE2E2;
+    -fx-text-fill: #B91C1C;
+}
+
+/* Na čekanju – žuto */
+.status-pill-pending {
+    -fx-background-color: #FEF9C3;
+    -fx-text-fill: #92400E;
+}
+/* ================================================================
+   BOOKING – FINAL: PLAVI HEADER + BEZ DONJEG SCROLLBARA
+   ================================================================ */
+
+/* okvir tabele – zaobljeni uglovi, bez unutrašnjeg gapa */
+.booking-table-wrapper {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #111827;
+    -fx-border-width: 2;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-padding: 0;
+}
+
+/* sama tabela */
+.table-view.booking-table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+/* HEADER – TVOJA PLAVA (#3B82F6) + zaobljeni gornji uglovi */
+.table-view.booking-table .column-header-background,
+.table-view.booking-table .column-header {
+    -fx-background-color: #3B82F6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 12 12 0 0;
+    -fx-border-color: transparent transparent #1D4ED8 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 0 3 0;
+}
+
+/* tekst u headeru – bijeli, kompaktan da stane cijeli naziv kolone */
+.table-view.booking-table .column-header .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER;
+    -fx-padding: 4 4 4 4;
+    -fx-font-size: 13;
+}
+
+/* fine linije između header kolona */
+.table-view.booking-table .column-header {
+    -fx-border-color: transparent #2563EB transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* redovi */
+.table-view.booking-table .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 44;
+}
+
+.table-view.booking-table .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.table-view.booking-table .table-row-cell:selected {
+    -fx-background-color: #EEF2FF;
+}
+
+/* ćelije */
+.table-view.booking-table .table-cell {
+    -fx-padding: 6 10 6 10;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 13;
+}
+
+/* nema plavog fokus okvira oko tabele */
+.table-view.booking-table:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* sakrij horizontalni scroll bar (onaj sivi “gap” dolje) */
+.table-view.booking-table .virtual-flow .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.table-view.booking-table .virtual-flow .scroll-bar:horizontal .track,
+.table-view.booking-table .virtual-flow .scroll-bar:horizontal .thumb,
+.table-view.booking-table .virtual-flow .scroll-bar:horizontal .increment-button,
+.table-view.booking-table .virtual-flow .scroll-bar:horizontal .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+    -fx-max-height: 0;
+}
+
+/* donji unutrašnji ugao tabele prati okvir */
+.table-view.booking-table .virtual-flow {
+    -fx-background-radius: 0 0 12 12;
+}
+
+/* -----------------------------------
+   LOGOUT BUTTON – TRUE TRANSPARENT
+----------------------------------- */
+
+.logout-btn {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+    -fx-padding: 0;
+}
+
+.logout-btn .button,
+.logout-btn .content,
+.logout-btn .container,
+.logout-btn .label {
+    -fx-background-color: transparent !important;
+}
+
+.logout-btn:hover {
+    -fx-background-color: rgba(255, 0, 0, 0.12);
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+

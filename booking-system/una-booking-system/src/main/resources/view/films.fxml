@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ba.una.booking.controller.FilmsController"
+            stylesheets="@../css/films.css"
+            prefWidth="1200" prefHeight="800"
+            styleClass="page-background">
+
+
+    <!-- Glavni layout unutar stranice -->
+    <VBox spacing="20"
+          AnchorPane.topAnchor="30"
+          AnchorPane.leftAnchor="40"
+          AnchorPane.rightAnchor="40"
+          AnchorPane.bottomAnchor="30">
+
+        <!-- NASLOV -->
+        <Label text="Filmovi" styleClass="page-title"/>
+
+        <!-- RED: +Dodaj film + search + filteri -->
+        <HBox alignment="CENTER_LEFT" spacing="15">
+
+            <!-- + DODAJ FILM (manje dugme ispod naslova) -->
+            <Button fx:id="btnAddFilm"
+                    text="+ Dodaj Film"
+                    onAction="#handleAddFilm"
+                    styleClass="add-button-small"/>
+
+            <!-- gura search i filtere udesno -->
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- SEARCH (mali) -->
+            <HBox alignment="CENTER_LEFT" styleClass="search-box-small">
+                <Label text="🔍" styleClass="search-icon-small"/>
+                <TextField fx:id="searchField"
+                           promptText="Pretraži filmove"
+                           onKeyReleased="#onSearch"
+                           styleClass="search-input-small"/>
+            </HBox>
+
+            <!-- ŽANR -->
+            <MenuButton fx:id="genreFilterButton"
+                        text="Žanr"
+                        styleClass="filter-button-small">
+                <items>
+                    <MenuItem text="Svi"        onAction="#filterGenreAll"/>
+                    <MenuItem text="Akcija"     onAction="#filterGenreAction"/>
+                    <MenuItem text="Drama"      onAction="#filterGenreDrama"/>
+                    <MenuItem text="Sci-Fi"     onAction="#filterGenreScifi"/>
+                    <MenuItem text="Animirani"  onAction="#filterGenreAnimated"/>
+                    <MenuItem text="Crime"      onAction="#filterGenreCrime"/>
+                </items>
+            </MenuButton>
+
+            <!-- STATUS -->
+            <MenuButton fx:id="statusFilterButton"
+                        text="Status"
+                        styleClass="filter-button-small">
+                <items>
+                    <MenuItem text="Svi"       onAction="#filterStatusAll"/>
+                    <MenuItem text="Aktivan"   onAction="#filterStatusActive"/>
+                    <MenuItem text="Neaktivan" onAction="#filterStatusInactive"/>
+                </items>
+            </MenuButton>
+
+        </HBox>
+
+        <!-- SCROLLPANE sa karticom i tabelom -->
+        <ScrollPane fx:id="filmsScroll"
+                    fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="ALWAYS"
+                    styleClass="films-scroll">
+
+            <!-- sama kartica -->
+            <VBox styleClass="films-table-wrapper">
+
+                <TableView fx:id="filmTable"
+                           styleClass="films-table"
+                           prefHeight="420">
+
+                    <columns>
+                        <TableColumn fx:id="colNaziv"    text="Naziv"/>
+                        <TableColumn fx:id="colGodina"   text="Godina"/>
+                        <TableColumn fx:id="colTrajanje" text="Trajanje"/>
+                        <TableColumn fx:id="colStatus"   text="Status"/>
+                        <TableColumn fx:id="colDetalji"  text="Detalji"/>
+                    </columns>
+
+                </TableView>
+
+            </VBox>
+
+        </ScrollPane>
+
+    </VBox>
+
+</AnchorPane>

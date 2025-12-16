@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ba.una.booking.controller.DashboardController"
+      spacing="24"
+      styleClass="page">
+
+    <!-- HEADER -->
+    <HBox alignment="CENTER_LEFT">
+        <Label text="Dashboard"
+               styleClass="app-header-title"/>
+    </HBox>
+
+    <Label text="Kratka statistika"
+           styleClass="section-title"/>
+
+    <!-- GLAVNI RED -->
+    <HBox spacing="32">
+
+        <!-- LIJEVO -->
+        <VBox spacing="24" HBox.hgrow="ALWAYS">
+
+            <!-- STAT KARTICE -->
+            <GridPane hgap="20" vgap="20">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50"/>
+                    <ColumnConstraints percentWidth="50"/>
+                </columnConstraints>
+
+                <VBox GridPane.rowIndex="0" GridPane.columnIndex="0"
+                      styleClass="stat-card">
+                    <Label fx:id="filmsCountLabel"
+                           styleClass="stat-number"/>
+                    <Label text="Aktivna filma"
+                           styleClass="stat-label"/>
+                </VBox>
+
+                <VBox GridPane.rowIndex="0" GridPane.columnIndex="1"
+                      styleClass="stat-card">
+                    <Label fx:id="partnersCountLabel"
+                           styleClass="stat-number"/>
+                    <Label text="Partnera"
+                           styleClass="stat-label"/>
+                </VBox>
+
+                <VBox GridPane.rowIndex="1" GridPane.columnIndex="0"
+                      styleClass="stat-card">
+                    <Label fx:id="bookingsMonthLabel"
+                           styleClass="stat-number"/>
+                    <Label text="Bookinga ovaj mjesec"
+                           styleClass="stat-label"/>
+                </VBox>
+
+                <VBox GridPane.rowIndex="1" GridPane.columnIndex="1"
+                      styleClass="stat-card">
+                    <Label fx:id="partnersActivityLabel"
+                           styleClass="stat-number"/>
+                    <Label text="Aktivnost Partnera"
+                           styleClass="stat-label"/>
+                </VBox>
+            </GridPane>
+
+            <!-- GRAFOVI (STABILNO) -->
+            <GridPane hgap="24">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50"/>
+                    <ColumnConstraints percentWidth="50"/>
+                </columnConstraints>
+
+                <!-- Booking po mjesecu -->
+                <VBox spacing="8">
+                    <Label text="Booking po mjesecu"
+                           styleClass="chart-title"/>
+                    <LineChart fx:id="bookingsChart"
+                               prefHeight="250"
+                               maxWidth="Infinity"
+                               legendVisible="false">
+                        <xAxis>
+                            <CategoryAxis animated="false"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis animated="false"/>
+                        </yAxis>
+                    </LineChart>
+                </VBox>
+
+                <!-- Aktivnost partnera -->
+                <VBox spacing="8" GridPane.columnIndex="1">
+                    <Label text="Aktivnost Partnera"
+                           styleClass="chart-title"/>
+                    <LineChart fx:id="partnersChart"
+                               prefHeight="250"
+                               maxWidth="Infinity"
+                               legendVisible="false">
+                        <xAxis>
+                            <CategoryAxis animated="false"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis animated="false"/>
+                        </yAxis>
+                    </LineChart>
+                </VBox>
+
+            </GridPane>
+
+        </VBox>
+
+        <!-- DESNO: QUICK ACTIONS (NETAKNUTO) -->
+        <VBox fx:id="quickActionsContainer"
+              spacing="16"
+              minWidth="260">
+
+            <Label text="Quick actions"
+                   styleClass="section-title"/>
+
+            <VBox spacing="12">
+
+                <HBox fx:id="quickAddBookingBox"
+                      alignment="CENTER_LEFT"
+                      spacing="12"
+                      styleClass="quick-action-box"
+                      onMouseClicked="#onAddBookingQuick">
+                    <StackPane prefWidth="32"
+                               prefHeight="32"
+                               alignment="CENTER"
+                               styleClass="quick-action-icon-circle">
+                        <Label text="+"
+                               styleClass="quick-action-icon-plus"
+                               prefWidth="60"
+                               prefHeight="60"/>
+                    </StackPane>
+                    <Label text="Dodaj Booking"
+                           styleClass="quick-action-text"/>
+                </HBox>
+
+                <HBox fx:id="quickAddFilmBox"
+                      alignment="CENTER_LEFT"
+                      spacing="12"
+                      styleClass="quick-action-box"
+                      onMouseClicked="#onAddFilmQuick">
+                    <StackPane prefWidth="32"
+                               prefHeight="32"
+                               alignment="CENTER"
+                               styleClass="quick-action-icon-circle">
+                        <Label text="+"
+                               styleClass="quick-action-icon-plus"
+                               prefWidth="60"
+                               prefHeight="60"/>
+                    </StackPane>
+                    <Label text="Dodaj Film"
+                           styleClass="quick-action-text"/>
+                </HBox>
+
+                <HBox fx:id="quickAddPartnerBox"
+                      alignment="CENTER_LEFT"
+                      spacing="12"
+                      styleClass="quick-action-box"
+                      onMouseClicked="#onAddPartnerQuick">
+                    <StackPane prefWidth="32"
+                               prefHeight="32"
+                               alignment="CENTER"
+                               styleClass="quick-action-icon-circle">
+                        <Label text="+"
+                               styleClass="quick-action-icon-plus"
+                               prefWidth="60"
+                               prefHeight="60"/>
+                    </StackPane>
+                    <Label text="Dodaj Partnera"
+                           styleClass="quick-action-text"/>
+                </HBox>
+
+            </VBox>
+        </VBox>
+
+    </HBox>
+
+</VBox>

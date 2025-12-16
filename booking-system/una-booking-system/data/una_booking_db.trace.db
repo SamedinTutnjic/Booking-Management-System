@@ -1,0 +1,54 @@
+2025-12-15 23:09:34.731983+01:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "users" not found (this database is empty); SQL statement:
+    SELECT id, username, password_hash, role, active
+    FROM users
+    WHERE username = ? AND active = TRUE
+ [42104-224]
+2025-12-15 23:09:43.686411+01:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "users" not found (this database is empty); SQL statement:
+    SELECT id, username, password_hash, role, active
+    FROM users
+    WHERE username = ? AND active = TRUE
+ [42104-224]
+2025-12-15 23:11:33.568007+01:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "users" not found (this database is empty); SQL statement:
+    SELECT id, username, password_hash, role, active
+    FROM users
+    WHERE username = ? AND active = TRUE
+ [42104-224]
+2025-12-15 23:36:17.395336+01:00 jdbc[99]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "film_naziv" not found [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at ba.una.booking.dao.BookingDao.mapBooking(BookingDao.java:303)
+	at ba.una.booking.dao.BookingDao.getByFilmName(BookingDao.java:258)
+	at ba.una.booking.controller.BookingDetailsController.lambda$handleExport$0(BookingDetailsController.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-15 23:38:16.737674+01:00 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "film_naziv" not found [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at ba.una.booking.dao.BookingDao.mapBooking(BookingDao.java:303)
+	at ba.una.booking.dao.BookingDao.getByFilmName(BookingDao.java:258)
+	at ba.una.booking.controller.BookingDetailsController.lambda$handleExport$0(BookingDetailsController.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-15 23:41:55.878569+01:00 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "film_naziv" not found [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at ba.una.booking.dao.BookingDao.mapBooking(BookingDao.java:303)
+	at ba.una.booking.dao.BookingDao.getByFilmName(BookingDao.java:258)
+	at ba.una.booking.controller.BookingDetailsController.lambda$handleExport$0(BookingDetailsController.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1474)

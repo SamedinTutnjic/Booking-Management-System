@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ba.una.booking.controller.BookingController"
+            stylesheets="@../css/booking.css"
+            styleClass="page-background">
+
+    <center>
+        <VBox spacing="24" styleClass="page">
+            <padding>
+                <Insets top="24" right="40" bottom="32" left="40"/>
+            </padding>
+
+            <!-- NASLOV -->
+            <HBox alignment="CENTER_LEFT">
+                <Label text="Booking" styleClass="page-title"/>
+            </HBox>
+
+            <!-- STAT KARTICE -->
+            <HBox spacing="16">
+                <HBox styleClass="stat-card" prefWidth="210">
+                    <VBox>
+                        <Label fx:id="totalBookingsLabel" styleClass="stat-number"/>
+                        <Label text="Ukupno booking-a" styleClass="stat-label"/>
+                    </VBox>
+                </HBox>
+
+                <HBox styleClass="stat-card" prefWidth="160">
+                    <VBox>
+                        <Label fx:id="confirmedLabel" styleClass="stat-number"/>
+                        <Label text="Potvrđeni" styleClass="stat-label"/>
+                    </VBox>
+                </HBox>
+
+                <HBox styleClass="stat-card" prefWidth="160">
+                    <VBox>
+                        <Label fx:id="rejectedLabel" styleClass="stat-number"/>
+                        <Label text="Odbijeni" styleClass="stat-label"/>
+                    </VBox>
+                </HBox>
+
+                <HBox styleClass="stat-card" prefWidth="160">
+                    <VBox>
+                        <Label fx:id="pendingLabel" styleClass="stat-number"/>
+                        <Label text="Na čekanju" styleClass="stat-label"/>
+                    </VBox>
+                </HBox>
+            </HBox>
+
+            <!-- DUGME + FILTERI -->
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <Button text="+ Dodaj Booking"
+                        styleClass="primary-button-small"
+                        onAction="#handleAddBooking"/>
+
+                <Pane HBox.hgrow="ALWAYS"/>
+
+                <ComboBox fx:id="filmFilter"
+                          prefWidth="160"
+                          promptText="Film"
+                          styleClass="filter-combo-small"/>
+
+                <ComboBox fx:id="partnerFilter"
+                          prefWidth="160"
+                          promptText="Partner"
+                          styleClass="filter-combo-small"/>
+            </HBox>
+
+            <!-- SCROLLPANE – KLJUČNI FIX -->
+            <ScrollPane fx:id="bookingScroll"
+                        fitToWidth="true"
+                        fitToHeight="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="ALWAYS"
+                        styleClass="booking-scroll"
+                        prefHeight="520"
+                        maxHeight="520">
+
+                <!-- KARTICA -->
+                <VBox styleClass="booking-table-wrapper"
+                      minHeight="520">
+
+                    <TableView fx:id="bookingTable"
+                               styleClass="booking-table"
+                               prefHeight="520">
+
+                        <columns>
+                            <TableColumn fx:id="filmColumn" text="Film" prefWidth="150"/>
+                            <TableColumn fx:id="partnerColumn" text="Partner" prefWidth="150"/>
+                            <TableColumn fx:id="startDateColumn" text="Datum početka" prefWidth="120"/>
+                            <TableColumn fx:id="endDateColumn" text="Datum završetka" prefWidth="120"/>
+                            <TableColumn fx:id="materialColumn" text="Materijal" prefWidth="100"/>
+                            <TableColumn fx:id="statusColumn" text="Status" prefWidth="130"/>
+                            <TableColumn fx:id="createdByColumn" text="Kreirao" prefWidth="110"/>
+                            <TableColumn fx:id="createdAtColumn" text="Kreirano" prefWidth="110"/>
+                            <TableColumn fx:id="detailsColumn" text="Detalji" prefWidth="100"/>
+                        </columns>
+
+                    </TableView>
+
+                </VBox>
+            </ScrollPane>
+
+        </VBox>
+    </center>
+</BorderPane>
