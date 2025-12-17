@@ -110,3 +110,13 @@ Administrativne i korisničke postavke:
 ✔️ Projekat razvijen kao **akademski i praktični softverski sistem**  
 ✔️ Korišten u svrhu demonstracije modernog desktop rješenja  
 ✔️ Spreman za prezentaciju i dalju nadogradnju  
+
+## Authors
+
+This project was developed as a team effort by:
+
+- Samedin Tutnjić  
+- Kemal Hasanspahić  
+- Sanjin Samardžić  
+- Aldina Ismić
+
