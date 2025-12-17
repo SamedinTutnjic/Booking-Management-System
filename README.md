@@ -113,7 +113,7 @@ Administrativne i korisničke postavke:
 
 ## Authors
 
-This project was developed as a team effort by:
+Ovaj projekt je razvijen kao timski rad grupe:
 
 - Samedin Tutnjić  
 - Kemal Hasanspahić  
