@@ -25,7 +25,6 @@ Zbog toga se komunikacija prema partnerima i dalje odvija putem e-maila, dok se 
 - **Baza podataka:** MySQL (alternativno SQLite za demo)  
 - **Arhitektura:** MVC (Model–View–Controller)  
 - **PDF / Excel eksport:** iText / Apache PDFBox / Apache POI  
-- **Kontrola verzije:** Git & GitHub  
 
 ---
 
