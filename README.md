@@ -24,7 +24,7 @@ Zbog toga se komunikacija prema partnerima i dalje odvija putem e-maila, dok se 
 - **GUI:** JavaFX (FXML + CSS)  
 - **Baza podataka:** MySQL (alternativno SQLite za demo)  
 - **Arhitektura:** MVC (Model–View–Controller)  
-- **PDF / Excel eksport:** iText / Apache PDFBox / Apache POI  
+- **Excel eksport:** Apache POI  
 
 ---
 
