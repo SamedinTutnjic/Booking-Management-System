@@ -110,6 +110,7 @@ Administrativne i korisničke postavke:
 ✔️ Korišten u svrhu demonstracije modernog desktop rješenja  
 ✔️ Spreman za prezentaciju i dalju nadogradnju
 
+
 ## 🧩 Instalacija i korištenje
 
 Koraci instalacije
@@ -125,6 +126,7 @@ Koraci instalacije
 Korištenje aplikacije
 - Pokrenite aplikaciju dvoklikom na ikonu na Desktopu.
 - Aplikacija je spremna za korištenje bez dodatnih podešavanja ili konfiguracije.
+
 
 ## Authors
 
