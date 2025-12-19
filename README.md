@@ -149,6 +149,16 @@ Korištenje aplikacije
 - Pokrenite aplikaciju dvoklikom na ikonu na Desktopu.
 - Aplikacija je spremna za korištenje bez dodatnih podešavanja ili konfiguracije.
 
+## 🔐 Testni korisnici
+
+Admin (puna kontrola sistema)
+- Korisničko ime: admin
+- Šifra: admin
+
+Referent (ograničene ovlasti)
+- Korisničko ime: referent
+- Šifra: referent
+
 
 ## Authors
 
