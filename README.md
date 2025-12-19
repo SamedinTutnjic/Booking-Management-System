@@ -104,7 +104,7 @@ Administrativne i korisničke postavke:
 
 ---
 
-📌 Dashboard (Referent)
+## 📌 Dashboard (Referent)
 <img width="1198" height="778" alt="Referent" src="https://github.com/user-attachments/assets/e0ead64b-4e47-4fa4-9251-a3d10c163c0c" />
 
 Početni ekran za korisnika sa ograničenim ovlaštenjima. Prikazuje osnovne statistike (aktivni filmovi, partneri, booking aktivnost) te omogućava brze akcije za dodavanje bookinga i praćenje booking kalendara, bez administrativnog pristupa ostalim modulima sistema.
