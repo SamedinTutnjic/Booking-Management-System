@@ -60,6 +60,11 @@ Baza kino partnera:
 - interna evidencija saradnje i napomena  
 - brza pretraga i filtriranje partnera  
 
+## Dodaj partnera
+<img width="1199" height="777" alt="dodaj partnera" src="https://github.com/user-attachments/assets/c1c2bb5a-693e-4480-a805-1fb665cf7288" />
+
+Forma za unos novog kino-partnera u bazu. Omogućava unos osnovnih podataka o kinu, kontakt informacije, status saradnje i internu napomenu, uz spremanje partnera direktno u sistem.
+
 ---
 
 ### 🎞️ Filmovi
@@ -70,6 +75,11 @@ Centralizovana baza filmova:
 - žanr, trajanje, godina izlaska  
 - period distribucije i status  
 - administracija kataloga filmova UNA Filma  
+
+## Dodaj film
+<img width="1199" height="777" alt="dodaj film" src="https://github.com/user-attachments/assets/5ce9215c-83fe-4ac3-9361-d72177172b9d" />
+
+Forma za unos novog filma u sistem. Omogućava unos osnovnih informacija o filmu (naziv, godina, trajanje), izbor statusa i žanra, te dodavanje kratkog opisa prije spremanja u bazu.
 
 ---
 
@@ -91,6 +101,13 @@ Administrativne i korisničke postavke:
 - podešavanje teme (Light / Dark mode)  
 - osnovne sistemske konfiguracije  
 - sigurnosne i validacijske opcije  
+
+---
+
+📌 Dashboard (Referent)
+<img width="1198" height="778" alt="Referent" src="https://github.com/user-attachments/assets/e0ead64b-4e47-4fa4-9251-a3d10c163c0c" />
+
+Početni ekran za korisnika sa ograničenim ovlaštenjima. Prikazuje osnovne statistike (aktivni filmovi, partneri, booking aktivnost) te omogućava brze akcije za dodavanje bookinga i praćenje booking kalendara, bez administrativnog pristupa ostalim modulima sistema.
 
 ---
 
