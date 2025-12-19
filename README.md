@@ -93,7 +93,7 @@ Vizuelni kalendarski prikaz svih termina:
 
 ---
 
-### ⚙️ Postavke
+### ⚙️ Postavke ADMIN
 <img width="1200" height="779" alt="image" src="https://github.com/user-attachments/assets/ec1c79f6-6a96-4662-9fa2-6fef1211d791" />
 
 Administrativne i korisničke postavke:
@@ -108,6 +108,11 @@ Administrativne i korisničke postavke:
 <img width="1198" height="778" alt="Referent" src="https://github.com/user-attachments/assets/e0ead64b-4e47-4fa4-9251-a3d10c163c0c" />
 
 Početni ekran za korisnika sa ograničenim ovlaštenjima. Prikazuje osnovne statistike (aktivni filmovi, partneri, booking aktivnost) te omogućava brze akcije za dodavanje bookinga i praćenje booking kalendara, bez administrativnog pristupa ostalim modulima sistema.
+
+## ⚙️ Postavke REFERENT
+<img width="1198" height="778" alt="image" src="https://github.com/user-attachments/assets/80f2f4f4-34d2-4b49-885e-796d4dd38aaa" />
+
+Postavke za referentnu ulogu sa pregledom profila i osnovnim korisničkim opcijama (npr. promjena teme), bez administrativnih ovlaštenja.
 
 ---
 
