@@ -60,7 +60,7 @@ Centralni pregled stanja sistema sa osnovnim statistikama:
 - Pregled detalja za svaki unos preko dugmeta Detalji
 - Scroll/paginacija omogućava rad i sa većim brojem booking zapisa
 
-### 🎟️ Booking
+### 🎟️ Dodaj booking
 <img width="1198" height="778" alt="image" src="https://github.com/user-attachments/assets/0ae366cd-6ae9-4f3f-aa20-e56d8cc259f4" />
 
 Modul za kreiranje i upravljanje booking terminima:
